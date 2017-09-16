@@ -1,0 +1,12 @@
+PODS:
+  - TTADataPickerView (0.2.0)
+
+DEPENDENCIES:
+  - TTADataPickerView
+
+SPEC CHECKSUMS:
+  TTADataPickerView: b3dc170aedd48f8ee275a04912170a4286ff11e2
+
+PODFILE CHECKSUM: 78d82b34354b411fe83efd08bb22cafbd1ea30aa
+
+COCOAPODS: 1.2.1

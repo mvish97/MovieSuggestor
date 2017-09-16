@@ -1,0 +1,564 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		39F888CAA473C1B633EDBF2409246438 /* TTADataPickerToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D7A36C3899AA1E2953A04D6BA8449 /* TTADataPickerToolBar.swift */; };
+		48A08F7D8B00B82CE8EAE5CE4585C32E /* TTADataPickerTitleBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CCDD08B590568A7E10148CF479FD95 /* TTADataPickerTitleBarButtonItem.swift */; };
+		707BD0D91E476DFD09B224826906D0E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		7F74CF3786184EF007B481CEBEB4E999 /* Pods-MovieSuggestor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3962A7D95D81A670989DEB419F2FB735 /* Pods-MovieSuggestor-dummy.m */; };
+		B1B9CF8821E52D4F0A5959B767C55753 /* Pods-MovieSuggestor-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 04FB2F9868D3F7A8D5C818C3A6B1E0AA /* Pods-MovieSuggestor-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD190B476AF73E23355BDAEC6E7789F3 /* TTADataPickerView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A42969D88FA2E071B9530DAFB26663 /* TTADataPickerView-dummy.m */; };
+		D065E046FDFD64534666AAAE1F6A728F /* TTADataPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226B173ADFC3AAA94EFBBCA1B6A6FCB9 /* TTADataPickerViewController.swift */; };
+		D0DC16A9450CBB4CD85C6C03681761C0 /* TTADataPickerView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 903F6E7DBEEC3607E6DC6C7E06B10D78 /* TTADataPickerView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E4F65A744E0E782DF436FA1A687C9A1B /* TTADataPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0535ED7D1023D02F99A6E9BACC606 /* TTADataPickerView.swift */; };
+		F640AE3FE615CF8799515614DA3C28C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9E0A8174E6AAC1B643061842D3AD28AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9DB8EA7F6F1A17A25DE642BFA2ECBDE6;
+			remoteInfo = TTADataPickerView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04FB2F9868D3F7A8D5C818C3A6B1E0AA /* Pods-MovieSuggestor-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MovieSuggestor-umbrella.h"; sourceTree = "<group>"; };
+		226B173ADFC3AAA94EFBBCA1B6A6FCB9 /* TTADataPickerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TTADataPickerViewController.swift; path = TTADataPickerView/TTADataPickerViewController.swift; sourceTree = "<group>"; };
+		2E9204926034B60E678DA8DF5171CD4B /* Pods-MovieSuggestor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MovieSuggestor.release.xcconfig"; sourceTree = "<group>"; };
+		2FD6885B44D521C874B6209DFBBCBE80 /* Pods-MovieSuggestor-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MovieSuggestor-resources.sh"; sourceTree = "<group>"; };
+		3785F033E5A997440DCC47D4C5736C7D /* Pods-MovieSuggestor.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MovieSuggestor.modulemap"; sourceTree = "<group>"; };
+		3962A7D95D81A670989DEB419F2FB735 /* Pods-MovieSuggestor-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MovieSuggestor-dummy.m"; sourceTree = "<group>"; };
+		4330F6AA8E355621D1E00AC2B9405B62 /* Pods-MovieSuggestor-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MovieSuggestor-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		762F50749DE303EAE43F729C31801A43 /* Pods-MovieSuggestor-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MovieSuggestor-frameworks.sh"; sourceTree = "<group>"; };
+		77B0535ED7D1023D02F99A6E9BACC606 /* TTADataPickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TTADataPickerView.swift; path = TTADataPickerView/TTADataPickerView.swift; sourceTree = "<group>"; };
+		78FFCE07B436FADAAE83A75F1C6B6AD2 /* Pods-MovieSuggestor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MovieSuggestor.debug.xcconfig"; sourceTree = "<group>"; };
+		903F6E7DBEEC3607E6DC6C7E06B10D78 /* TTADataPickerView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TTADataPickerView-umbrella.h"; sourceTree = "<group>"; };
+		90A42969D88FA2E071B9530DAFB26663 /* TTADataPickerView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TTADataPickerView-dummy.m"; sourceTree = "<group>"; };
+		91160B2A67DABDEB8DA4D76E0E0630DE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A3FC112433078DF7F50991CB409931D6 /* TTADataPickerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TTADataPickerView.framework; path = TTADataPickerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB165E000624FF3B2CA8B558C9A51F48 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB9D7A36C3899AA1E2953A04D6BA8449 /* TTADataPickerToolBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TTADataPickerToolBar.swift; path = TTADataPickerView/TTADataPickerToolBar.swift; sourceTree = "<group>"; };
+		BACC5BC264B28FD91E987D18F2712147 /* Pods_MovieSuggestor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MovieSuggestor.framework; path = "Pods-MovieSuggestor.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBF1D265D9432DF04A3DBE6952537C84 /* TTADataPickerView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TTADataPickerView-prefix.pch"; sourceTree = "<group>"; };
+		C1CCDD08B590568A7E10148CF479FD95 /* TTADataPickerTitleBarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TTADataPickerTitleBarButtonItem.swift; path = TTADataPickerView/TTADataPickerTitleBarButtonItem.swift; sourceTree = "<group>"; };
+		C7F953113100092A551539FF9D026BD7 /* Pods-MovieSuggestor-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MovieSuggestor-acknowledgements.plist"; sourceTree = "<group>"; };
+		CF07A0A096682A0EC8096E47C819CE04 /* TTADataPickerView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TTADataPickerView.xcconfig; sourceTree = "<group>"; };
+		DF75B3DB58FFB797D1D852C4AE59AE66 /* TTADataPickerView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TTADataPickerView.modulemap; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		38C5EE43D6CA7E65D3315F3087758B04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F640AE3FE615CF8799515614DA3C28C7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D96BFC48FFBF2FC725AF22733A1432A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				707BD0D91E476DFD09B224826906D0E9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		15D1D166EF4653C7D520A0E63792A7FB /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6E41932CA868CB034234ACF0F0FEECF6 /* Pods-MovieSuggestor */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		5837049D80C271C725C83FC3EA3E19B0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AB165E000624FF3B2CA8B558C9A51F48 /* Info.plist */,
+				DF75B3DB58FFB797D1D852C4AE59AE66 /* TTADataPickerView.modulemap */,
+				CF07A0A096682A0EC8096E47C819CE04 /* TTADataPickerView.xcconfig */,
+				90A42969D88FA2E071B9530DAFB26663 /* TTADataPickerView-dummy.m */,
+				BBF1D265D9432DF04A3DBE6952537C84 /* TTADataPickerView-prefix.pch */,
+				903F6E7DBEEC3607E6DC6C7E06B10D78 /* TTADataPickerView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TTADataPickerView";
+			sourceTree = "<group>";
+		};
+		6E41932CA868CB034234ACF0F0FEECF6 /* Pods-MovieSuggestor */ = {
+			isa = PBXGroup;
+			children = (
+				91160B2A67DABDEB8DA4D76E0E0630DE /* Info.plist */,
+				3785F033E5A997440DCC47D4C5736C7D /* Pods-MovieSuggestor.modulemap */,
+				4330F6AA8E355621D1E00AC2B9405B62 /* Pods-MovieSuggestor-acknowledgements.markdown */,
+				C7F953113100092A551539FF9D026BD7 /* Pods-MovieSuggestor-acknowledgements.plist */,
+				3962A7D95D81A670989DEB419F2FB735 /* Pods-MovieSuggestor-dummy.m */,
+				762F50749DE303EAE43F729C31801A43 /* Pods-MovieSuggestor-frameworks.sh */,
+				2FD6885B44D521C874B6209DFBBCBE80 /* Pods-MovieSuggestor-resources.sh */,
+				04FB2F9868D3F7A8D5C818C3A6B1E0AA /* Pods-MovieSuggestor-umbrella.h */,
+				78FFCE07B436FADAAE83A75F1C6B6AD2 /* Pods-MovieSuggestor.debug.xcconfig */,
+				2E9204926034B60E678DA8DF5171CD4B /* Pods-MovieSuggestor.release.xcconfig */,
+			);
+			name = "Pods-MovieSuggestor";
+			path = "Target Support Files/Pods-MovieSuggestor";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				D0FA0871C43234D0F2FE8CC273963AE6 /* Pods */,
+				CBB3D3BC4C5C4774C5CB21E3F1EB2479 /* Products */,
+				15D1D166EF4653C7D520A0E63792A7FB /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		9DD5187922E73DEF257027201193E120 /* TTADataPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				C1CCDD08B590568A7E10148CF479FD95 /* TTADataPickerTitleBarButtonItem.swift */,
+				AB9D7A36C3899AA1E2953A04D6BA8449 /* TTADataPickerToolBar.swift */,
+				77B0535ED7D1023D02F99A6E9BACC606 /* TTADataPickerView.swift */,
+				226B173ADFC3AAA94EFBBCA1B6A6FCB9 /* TTADataPickerViewController.swift */,
+				5837049D80C271C725C83FC3EA3E19B0 /* Support Files */,
+			);
+			name = TTADataPickerView;
+			path = TTADataPickerView;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CBB3D3BC4C5C4774C5CB21E3F1EB2479 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BACC5BC264B28FD91E987D18F2712147 /* Pods_MovieSuggestor.framework */,
+				A3FC112433078DF7F50991CB409931D6 /* TTADataPickerView.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0FA0871C43234D0F2FE8CC273963AE6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9DD5187922E73DEF257027201193E120 /* TTADataPickerView */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1638181BD069B664CC26FBC855D2CBA5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0DC16A9450CBB4CD85C6C03681761C0 /* TTADataPickerView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C934727147BB175AF83661DD8BE5C62 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1B9CF8821E52D4F0A5959B767C55753 /* Pods-MovieSuggestor-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		9781B9C6A13D51A85E5EE375DA3F5B43 /* Pods-MovieSuggestor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE2D76BCDCABF4BD141DB5F18760F0C1 /* Build configuration list for PBXNativeTarget "Pods-MovieSuggestor" */;
+			buildPhases = (
+				84C297BDD7DAD603F0D531FA49A5B52B /* Sources */,
+				6D96BFC48FFBF2FC725AF22733A1432A /* Frameworks */,
+				1C934727147BB175AF83661DD8BE5C62 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7CC4F584BDABFE49CD2CB73179BDA659 /* PBXTargetDependency */,
+			);
+			name = "Pods-MovieSuggestor";
+			productName = "Pods-MovieSuggestor";
+			productReference = BACC5BC264B28FD91E987D18F2712147 /* Pods_MovieSuggestor.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9DB8EA7F6F1A17A25DE642BFA2ECBDE6 /* TTADataPickerView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B18A14AD8A5B8C73CA4B1250C327983C /* Build configuration list for PBXNativeTarget "TTADataPickerView" */;
+			buildPhases = (
+				125C94F2399DC84DCCF47C961D9B216D /* Sources */,
+				38C5EE43D6CA7E65D3315F3087758B04 /* Frameworks */,
+				1638181BD069B664CC26FBC855D2CBA5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TTADataPickerView;
+			productName = TTADataPickerView;
+			productReference = A3FC112433078DF7F50991CB409931D6 /* TTADataPickerView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = CBB3D3BC4C5C4774C5CB21E3F1EB2479 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9781B9C6A13D51A85E5EE375DA3F5B43 /* Pods-MovieSuggestor */,
+				9DB8EA7F6F1A17A25DE642BFA2ECBDE6 /* TTADataPickerView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		125C94F2399DC84DCCF47C961D9B216D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48A08F7D8B00B82CE8EAE5CE4585C32E /* TTADataPickerTitleBarButtonItem.swift in Sources */,
+				39F888CAA473C1B633EDBF2409246438 /* TTADataPickerToolBar.swift in Sources */,
+				BD190B476AF73E23355BDAEC6E7789F3 /* TTADataPickerView-dummy.m in Sources */,
+				E4F65A744E0E782DF436FA1A687C9A1B /* TTADataPickerView.swift in Sources */,
+				D065E046FDFD64534666AAAE1F6A728F /* TTADataPickerViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84C297BDD7DAD603F0D531FA49A5B52B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F74CF3786184EF007B481CEBEB4E999 /* Pods-MovieSuggestor-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7CC4F584BDABFE49CD2CB73179BDA659 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TTADataPickerView;
+			target = 9DB8EA7F6F1A17A25DE642BFA2ECBDE6 /* TTADataPickerView */;
+			targetProxy = 9E0A8174E6AAC1B643061842D3AD28AE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		16D480547550039CE227EF659A58D5F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF07A0A096682A0EC8096E47C819CE04 /* TTADataPickerView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TTADataPickerView/TTADataPickerView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TTADataPickerView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TTADataPickerView/TTADataPickerView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = TTADataPickerView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		643C76AA582046977B7877822ED7A258 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		69F5E75666EB7B4EE567D8DA74DB7901 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78FFCE07B436FADAAE83A75F1C6B6AD2 /* Pods-MovieSuggestor.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MovieSuggestor/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MovieSuggestor/Pods-MovieSuggestor.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MovieSuggestor;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7C4EE75EE40BE03699942E889C5E95F6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF07A0A096682A0EC8096E47C819CE04 /* TTADataPickerView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TTADataPickerView/TTADataPickerView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TTADataPickerView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TTADataPickerView/TTADataPickerView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = TTADataPickerView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B920A89043FDB507CA595FE4EF9681ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E9204926034B60E678DA8DF5171CD4B /* Pods-MovieSuggestor.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MovieSuggestor/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MovieSuggestor/Pods-MovieSuggestor.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MovieSuggestor;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C03B8870130C98D1B02B59D003687524 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				643C76AA582046977B7877822ED7A258 /* Debug */,
+				C03B8870130C98D1B02B59D003687524 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B18A14AD8A5B8C73CA4B1250C327983C /* Build configuration list for PBXNativeTarget "TTADataPickerView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16D480547550039CE227EF659A58D5F7 /* Debug */,
+				7C4EE75EE40BE03699942E889C5E95F6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE2D76BCDCABF4BD141DB5F18760F0C1 /* Build configuration list for PBXNativeTarget "Pods-MovieSuggestor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69F5E75666EB7B4EE567D8DA74DB7901 /* Debug */,
+				B920A89043FDB507CA595FE4EF9681ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
