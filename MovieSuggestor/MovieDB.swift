@@ -9,6 +9,10 @@
 import Foundation
 import Alamofire
 
+protocol TransferData {
+    func transferData(data: [GenreModel])
+}
+
 class MovieDB {
     
     let BASE_URL = "https://api.themoviedb.org/3"
@@ -20,8 +24,12 @@ class MovieDB {
     
     let IMAGE_URL = "https://image.tmdb.org/t/p/w500/"
     
-    func getGenreList() -> [GenreModel] {
-        var genreList: [GenreModel] = []
+    var genreList: [GenreModel] = []
+    
+    var delegate: TransferData? = nil
+    
+    func getGenreList() {
+        
         
         let url = BASE_URL + GENRE_LIST + API_KEY + LANG
         
@@ -31,12 +39,15 @@ class MovieDB {
                     for dict in list {
                         let temp_id = dict["id"] as! Int!
                         let temp_name = dict["name"] as! String!
-                        genreList.append(GenreModel(name: temp_name! , id: temp_id!))
+                        
+                        self.genreList.append(GenreModel(name: temp_name! , id: temp_id!))
+                    }
+                    
+                    if let del = self.delegate {
+                        del.transferData(data: self.genreList)
                     }
                 }
             }
         }
-        print(genreList)
-        return genreList
     }
 }

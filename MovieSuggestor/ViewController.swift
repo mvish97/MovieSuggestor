@@ -9,7 +9,7 @@
 import UIKit
 import TTADataPickerView
 
-class ViewController: UIViewController, TTADataPickerViewDelegate {
+class ViewController: UIViewController, TTADataPickerViewDelegate, TransferData {
 
     @IBOutlet weak var genreButton: UIButton!
     @IBOutlet weak var ratingLabel: UILabel!
@@ -17,7 +17,7 @@ class ViewController: UIViewController, TTADataPickerViewDelegate {
     
     let pickerView = TTADataPickerView(title: "Genres", type: .text, delegate: nil)
     var genres = [GenreModel]() // List of Genres and their ids
-    var genreNames: [String] = ["Action"]
+    var genreNames: [String] = []
     
     var movieArray: [MovieModel] = []
     var genreArray: [MovieModel] = [] // The list that will used to populate the tableview
@@ -37,17 +37,21 @@ class ViewController: UIViewController, TTADataPickerViewDelegate {
         tableView.delegate = self
         tableView.dataSource = self
         
-        populateMovies()
+        populateMovies() // TEMP
         
-        genres = backend.getGenreList()
+        
+        backend.delegate = self
+        backend.getGenreList()
+    }
+    
+    func transferData(data: [GenreModel]) { // Getting the genre list
+        genres = data
         genreNames = getGenreList()
     }
 
     @IBAction func selectGenre(_ sender: UIButton) {
         pickerView.type = .text
-        
         pickerView.delegate = self
-        
         pickerView.textItemsForComponent = [genreNames]
         
         let titles = [String]() // Array that stores the selected times
@@ -64,13 +68,13 @@ class ViewController: UIViewController, TTADataPickerViewDelegate {
     }
     
     @IBAction func selectRating(_ sender: UISlider) {
-        selectedRating = Int(sender.value)
+        selectedRating = Int(sender.value) // The rating the user selected
         ratingLabel.text =  "\(selectedRating)"
     }
 
     func dataPickerView(_ pickerView: TTADataPickerView, didSelectTitles titles: [String]) {
         genreButton.setTitle(titles[0], for: .normal)
-        selectedGenre = titles[0]
+        selectedGenre = titles[0] // The genre the user selected
     }
     
     @IBAction func findMoviesPressed(_ sender: UIButton) {
@@ -80,7 +84,7 @@ class ViewController: UIViewController, TTADataPickerViewDelegate {
         tableView.reloadData()
     }
     
-    func populateMovies() {
+    func populateMovies() { // TEMP
         movieArray = [MovieModel(poster: #imageLiteral(resourceName: "wonder woman"), name: "Wonder Woman", duration: "2 hr 21 min", rating: 7.7, genre: "Action"),
                       MovieModel(poster: #imageLiteral(resourceName: "the big sick"), name: "The Big Sick", duration: "2 hr", rating: 8.0, genre: "Rom Com"),
                       MovieModel(poster: #imageLiteral(resourceName: "guardians 2"), name: "Guardians of the Galaxy Vol. 2", duration: "2 hr 16 min", rating: 7.9, genre: "Adventure")]
@@ -121,6 +125,7 @@ extension ViewController { // HELPER FUNCTIONS
     }
     
     func getGenreList() -> [String] {
+        // Separates the genre names from the Genre Objects
         var list: [String] = []
         
         for i in genres {
