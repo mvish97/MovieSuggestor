@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-MovieSuggestor.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>9781B9C6A13D51A85E5EE375DA3F5B43</key>
+		<key>472BFA9A2AB042629F53E23BCFB554D9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9DB8EA7F6F1A17A25DE642BFA2ECBDE6</key>
+		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F3DCAAFB23591A1B5A6DDA9ADD1404A9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

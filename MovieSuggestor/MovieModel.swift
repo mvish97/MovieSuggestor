@@ -57,3 +57,29 @@ class MovieModel {
         _genre = genre
     }
 }
+
+class GenreModel {
+    
+    private var _name: String!
+    private var _id: Int!
+    
+    var name: String {
+        if _name == nil {
+            _name = ""
+        }
+        return _name
+    }
+    
+    var id: Int {
+        if _id == nil {
+            _id = 0
+        }
+        return _id
+    }
+    
+    init(name: String, id: Int) {
+        _name = name
+        _id = id
+    }
+}
+

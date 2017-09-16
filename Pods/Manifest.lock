@@ -1,12 +1,15 @@
 PODS:
+  - Alamofire (4.5.0)
   - TTADataPickerView (0.2.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.4)
   - TTADataPickerView
 
 SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   TTADataPickerView: b3dc170aedd48f8ee275a04912170a4286ff11e2
 
-PODFILE CHECKSUM: 78d82b34354b411fe83efd08bb22cafbd1ea30aa
+PODFILE CHECKSUM: 865d1fd664412dc18d81ce2b13e32a42309419ae
 
 COCOAPODS: 1.2.1

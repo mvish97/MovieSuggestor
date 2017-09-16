@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '9DB8EA7F6F1A17A25DE642BFA2ECBDE6'
+               BlueprintIdentifier = '472BFA9A2AB042629F53E23BCFB554D9'
                BlueprintName = 'TTADataPickerView'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'TTADataPickerView.framework'>

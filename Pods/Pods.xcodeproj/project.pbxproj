@@ -7,69 +7,128 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		39F888CAA473C1B633EDBF2409246438 /* TTADataPickerToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9D7A36C3899AA1E2953A04D6BA8449 /* TTADataPickerToolBar.swift */; };
-		48A08F7D8B00B82CE8EAE5CE4585C32E /* TTADataPickerTitleBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CCDD08B590568A7E10148CF479FD95 /* TTADataPickerTitleBarButtonItem.swift */; };
-		707BD0D91E476DFD09B224826906D0E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		7F74CF3786184EF007B481CEBEB4E999 /* Pods-MovieSuggestor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3962A7D95D81A670989DEB419F2FB735 /* Pods-MovieSuggestor-dummy.m */; };
-		B1B9CF8821E52D4F0A5959B767C55753 /* Pods-MovieSuggestor-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 04FB2F9868D3F7A8D5C818C3A6B1E0AA /* Pods-MovieSuggestor-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BD190B476AF73E23355BDAEC6E7789F3 /* TTADataPickerView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A42969D88FA2E071B9530DAFB26663 /* TTADataPickerView-dummy.m */; };
-		D065E046FDFD64534666AAAE1F6A728F /* TTADataPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226B173ADFC3AAA94EFBBCA1B6A6FCB9 /* TTADataPickerViewController.swift */; };
-		D0DC16A9450CBB4CD85C6C03681761C0 /* TTADataPickerView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 903F6E7DBEEC3607E6DC6C7E06B10D78 /* TTADataPickerView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4F65A744E0E782DF436FA1A687C9A1B /* TTADataPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0535ED7D1023D02F99A6E9BACC606 /* TTADataPickerView.swift */; };
-		F640AE3FE615CF8799515614DA3C28C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD082CE92D6AD3C221A84EAFF29491D /* Timeline.swift */; };
+		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 193358E3313E97600DC4AB8591303009 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34ACEB35BEBFC719C3BA4488D53D06A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		35B4D60A69F5BB07A1A204097A5EAE87 /* TTADataPickerView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD3C8852DE69FCD7AE4960AA907F6D9 /* TTADataPickerView-dummy.m */; };
+		3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E29BA3886D9FCB89B6AE3494F60468 /* TaskDelegate.swift */; };
+		4DC1BBED85613DF41547817A1E88FFC3 /* TTADataPickerTitleBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BC99299D10AA4A56DFC9176B42F8F9 /* TTADataPickerTitleBarButtonItem.swift */; };
+		505D6D1077982FE90BEEC3BDA141D7F8 /* TTADataPickerToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC0A1717976E1D736C2E59CD621AB23 /* TTADataPickerToolBar.swift */; };
+		5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2840D4E9C267A2B35EBC7B221C9503A /* Request.swift */; };
+		61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E386CEE14A66C11E1903AB1ED89532 /* DispatchQueue+Alamofire.swift */; };
+		62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4E64F9622983ED339C06B4144D8A4A /* ServerTrustPolicy.swift */; };
+		73B9C996AED49ED7CF8EC2A6F1738059 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		7463FBF7F89E38D15212660E77E11008 /* Pods-MovieSuggestor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3962A7D95D81A670989DEB419F2FB735 /* Pods-MovieSuggestor-dummy.m */; };
+		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00533053132FD9E4D83DCC7B940223B9 /* SessionDelegate.swift */; };
+		7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959E501FA60ABB6762A8BB8A179C5157 /* Result.swift */; };
+		875AFFE5476C70D911F7E781E7D7AA28 /* TTADataPickerView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9347D41C4097F2D59EA73FE048289C33 /* TTADataPickerView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		934F06D2E15E331DFD18438F67CE7309 /* TTADataPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3A8EBE75A64226F0AFF0CB573CBD26 /* TTADataPickerViewController.swift */; };
+		9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478E41420F4A7D3791F5D4A6B3E53BC6 /* AFError.swift */; };
+		A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8E46638126BA0EE802629C81A48DC4 /* NetworkReachabilityManager.swift */; };
+		A58DF78608670912034B41F0F0AC73C8 /* TTADataPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A269AA262A829ADFA701C05F303613 /* TTADataPickerView.swift */; };
+		A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B25560451717B0FDD7A9F7C6E94108F5 /* Alamofire-dummy.m */; };
+		ACD5977E62364819DAB64D84790CD9FC /* Pods-MovieSuggestor-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 04FB2F9868D3F7A8D5C818C3A6B1E0AA /* Pods-MovieSuggestor-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2567B1A30659B1E21F3C960FD604C120 /* SessionManager.swift */; };
+		B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B931DE5039415A8EE806598CAFA2E3 /* MultipartFormData.swift */; };
+		BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8981DB6EEEC1ED56913F4579E44C5E4C /* Validation.swift */; };
+		BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA7696F08174AA8E0E8E7F56A009D3C /* ParameterEncoding.swift */; };
+		C7E81B1CE5EBA612CEEBAF9E7C322D12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FC72B18A416709CCBB3A7D38A0EA57 /* Response.swift */; };
+		EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5FEE830FE24498C1DCBBB0A8E08140 /* Notifications.swift */; };
+		F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08954EB7D906DEB4190C2058D2A2913 /* ResponseSerialization.swift */; };
+		F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648462A6BF4160E6000EF7A116ABE8B1 /* Alamofire.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9E0A8174E6AAC1B643061842D3AD28AE /* PBXContainerItemProxy */ = {
+		2D6BCC645C507CCADFEC533C4172C100 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9DB8EA7F6F1A17A25DE642BFA2ECBDE6;
+			remoteGlobalIDString = 472BFA9A2AB042629F53E23BCFB554D9;
 			remoteInfo = TTADataPickerView;
+		};
+		E3C967DC8417AA1412CE8330FCEC3A08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88E9EC28B8B46C3631E6B242B50F4442;
+			remoteInfo = Alamofire;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00533053132FD9E4D83DCC7B940223B9 /* SessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionDelegate.swift; path = Source/SessionDelegate.swift; sourceTree = "<group>"; };
 		04FB2F9868D3F7A8D5C818C3A6B1E0AA /* Pods-MovieSuggestor-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MovieSuggestor-umbrella.h"; sourceTree = "<group>"; };
-		226B173ADFC3AAA94EFBBCA1B6A6FCB9 /* TTADataPickerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TTADataPickerViewController.swift; path = TTADataPickerView/TTADataPickerViewController.swift; sourceTree = "<group>"; };
+		155C6E01E482D69E213B85EAB70305E3 /* Pods_MovieSuggestor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MovieSuggestor.framework; path = "Pods-MovieSuggestor.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		193358E3313E97600DC4AB8591303009 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		19E29BA3886D9FCB89B6AE3494F60468 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
+		1CBC6D700FAD0F3FCEC1345A4C06BF3A /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2567B1A30659B1E21F3C960FD604C120 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
+		2D4E64F9622983ED339C06B4144D8A4A /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
 		2E9204926034B60E678DA8DF5171CD4B /* Pods-MovieSuggestor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MovieSuggestor.release.xcconfig"; sourceTree = "<group>"; };
 		2FD6885B44D521C874B6209DFBBCBE80 /* Pods-MovieSuggestor-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MovieSuggestor-resources.sh"; sourceTree = "<group>"; };
 		3785F033E5A997440DCC47D4C5736C7D /* Pods-MovieSuggestor.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-MovieSuggestor.modulemap"; sourceTree = "<group>"; };
 		3962A7D95D81A670989DEB419F2FB735 /* Pods-MovieSuggestor-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MovieSuggestor-dummy.m"; sourceTree = "<group>"; };
+		3BD082CE92D6AD3C221A84EAFF29491D /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
 		4330F6AA8E355621D1E00AC2B9405B62 /* Pods-MovieSuggestor-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MovieSuggestor-acknowledgements.markdown"; sourceTree = "<group>"; };
+		478E41420F4A7D3791F5D4A6B3E53BC6 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
+		60804EF4E4AEF1C660DFEB496ECCDF26 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		62E386CEE14A66C11E1903AB1ED89532 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		648462A6BF4160E6000EF7A116ABE8B1 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		704D1562420D0F1E323FDDA65A3962CC /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		7220C6EF96F427AD2D774E98BFC15AB7 /* TTADataPickerView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TTADataPickerView-prefix.pch"; sourceTree = "<group>"; };
 		762F50749DE303EAE43F729C31801A43 /* Pods-MovieSuggestor-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MovieSuggestor-frameworks.sh"; sourceTree = "<group>"; };
-		77B0535ED7D1023D02F99A6E9BACC606 /* TTADataPickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TTADataPickerView.swift; path = TTADataPickerView/TTADataPickerView.swift; sourceTree = "<group>"; };
 		78FFCE07B436FADAAE83A75F1C6B6AD2 /* Pods-MovieSuggestor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MovieSuggestor.debug.xcconfig"; sourceTree = "<group>"; };
-		903F6E7DBEEC3607E6DC6C7E06B10D78 /* TTADataPickerView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TTADataPickerView-umbrella.h"; sourceTree = "<group>"; };
-		90A42969D88FA2E071B9530DAFB26663 /* TTADataPickerView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TTADataPickerView-dummy.m"; sourceTree = "<group>"; };
+		8981DB6EEEC1ED56913F4579E44C5E4C /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
 		91160B2A67DABDEB8DA4D76E0E0630DE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9347D41C4097F2D59EA73FE048289C33 /* TTADataPickerView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TTADataPickerView-umbrella.h"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A3FC112433078DF7F50991CB409931D6 /* TTADataPickerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TTADataPickerView.framework; path = TTADataPickerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB165E000624FF3B2CA8B558C9A51F48 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AB9D7A36C3899AA1E2953A04D6BA8449 /* TTADataPickerToolBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TTADataPickerToolBar.swift; path = TTADataPickerView/TTADataPickerToolBar.swift; sourceTree = "<group>"; };
-		BACC5BC264B28FD91E987D18F2712147 /* Pods_MovieSuggestor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MovieSuggestor.framework; path = "Pods-MovieSuggestor.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BBF1D265D9432DF04A3DBE6952537C84 /* TTADataPickerView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TTADataPickerView-prefix.pch"; sourceTree = "<group>"; };
-		C1CCDD08B590568A7E10148CF479FD95 /* TTADataPickerTitleBarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TTADataPickerTitleBarButtonItem.swift; path = TTADataPickerView/TTADataPickerTitleBarButtonItem.swift; sourceTree = "<group>"; };
+		959E501FA60ABB6762A8BB8A179C5157 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		95A269AA262A829ADFA701C05F303613 /* TTADataPickerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TTADataPickerView.swift; path = TTADataPickerView/TTADataPickerView.swift; sourceTree = "<group>"; };
+		9FC0A1717976E1D736C2E59CD621AB23 /* TTADataPickerToolBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TTADataPickerToolBar.swift; path = TTADataPickerView/TTADataPickerToolBar.swift; sourceTree = "<group>"; };
+		A2840D4E9C267A2B35EBC7B221C9503A /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		A7FC72B18A416709CCBB3A7D38A0EA57 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		A8B931DE5039415A8EE806598CAFA2E3 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		B1BC99299D10AA4A56DFC9176B42F8F9 /* TTADataPickerTitleBarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TTADataPickerTitleBarButtonItem.swift; path = TTADataPickerView/TTADataPickerTitleBarButtonItem.swift; sourceTree = "<group>"; };
+		B25560451717B0FDD7A9F7C6E94108F5 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		BC3A8EBE75A64226F0AFF0CB573CBD26 /* TTADataPickerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TTADataPickerViewController.swift; path = TTADataPickerView/TTADataPickerViewController.swift; sourceTree = "<group>"; };
+		C08954EB7D906DEB4190C2058D2A2913 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
 		C7F953113100092A551539FF9D026BD7 /* Pods-MovieSuggestor-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MovieSuggestor-acknowledgements.plist"; sourceTree = "<group>"; };
-		CF07A0A096682A0EC8096E47C819CE04 /* TTADataPickerView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TTADataPickerView.xcconfig; sourceTree = "<group>"; };
-		DF75B3DB58FFB797D1D852C4AE59AE66 /* TTADataPickerView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TTADataPickerView.modulemap; sourceTree = "<group>"; };
+		CBD3C8852DE69FCD7AE4960AA907F6D9 /* TTADataPickerView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TTADataPickerView-dummy.m"; sourceTree = "<group>"; };
+		CE7AE639D8EBCDC24DFDBBEFB0CF5D41 /* TTADataPickerView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TTADataPickerView.framework; path = TTADataPickerView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D35BD641ABBFDB901ACB4933450833B8 /* TTADataPickerView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TTADataPickerView.xcconfig; sourceTree = "<group>"; };
+		E7562EBA0DF9FD1273C76375AA09DD75 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7B3F87FB9194F2AD4B7002BDD95495C /* TTADataPickerView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TTADataPickerView.modulemap; sourceTree = "<group>"; };
+		ED8E46638126BA0EE802629C81A48DC4 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		FD5FEE830FE24498C1DCBBB0A8E08140 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		FDA7696F08174AA8E0E8E7F56A009D3C /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		FDAF35306734FA97DFF994F8D546BFFC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE6042DCD4427EB984A91A444A796631 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		38C5EE43D6CA7E65D3315F3087758B04 /* Frameworks */ = {
+		6F4811B6C5EB25CB15B0791AAAB194F8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F640AE3FE615CF8799515614DA3C28C7 /* Foundation.framework in Frameworks */,
+				34ACEB35BEBFC719C3BA4488D53D06A7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6D96BFC48FFBF2FC725AF22733A1432A /* Frameworks */ = {
+		7EEDDB362D4274901AB2B133DFFFB5B5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				707BD0D91E476DFD09B224826906D0E9 /* Foundation.framework in Frameworks */,
+				C7E81B1CE5EBA612CEEBAF9E7C322D12 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99195E4207764744AEC07ECCBCD550EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73B9C996AED49ED7CF8EC2A6F1738059 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,18 +143,18 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		5837049D80C271C725C83FC3EA3E19B0 /* Support Files */ = {
+		3CCCAADE2C4B6B3C562387C59A01909A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				AB165E000624FF3B2CA8B558C9A51F48 /* Info.plist */,
-				DF75B3DB58FFB797D1D852C4AE59AE66 /* TTADataPickerView.modulemap */,
-				CF07A0A096682A0EC8096E47C819CE04 /* TTADataPickerView.xcconfig */,
-				90A42969D88FA2E071B9530DAFB26663 /* TTADataPickerView-dummy.m */,
-				BBF1D265D9432DF04A3DBE6952537C84 /* TTADataPickerView-prefix.pch */,
-				903F6E7DBEEC3607E6DC6C7E06B10D78 /* TTADataPickerView-umbrella.h */,
+				60804EF4E4AEF1C660DFEB496ECCDF26 /* Alamofire.modulemap */,
+				704D1562420D0F1E323FDDA65A3962CC /* Alamofire.xcconfig */,
+				B25560451717B0FDD7A9F7C6E94108F5 /* Alamofire-dummy.m */,
+				FE6042DCD4427EB984A91A444A796631 /* Alamofire-prefix.pch */,
+				193358E3313E97600DC4AB8591303009 /* Alamofire-umbrella.h */,
+				FDAF35306734FA97DFF994F8D546BFFC /* Info.plist */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/TTADataPickerView";
+			path = "../Target Support Files/Alamofire";
 			sourceTree = "<group>";
 		};
 		6E41932CA868CB034234ACF0F0FEECF6 /* Pods-MovieSuggestor */ = {
@@ -121,23 +180,36 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				D0FA0871C43234D0F2FE8CC273963AE6 /* Pods */,
-				CBB3D3BC4C5C4774C5CB21E3F1EB2479 /* Products */,
+				BF6CA5A88CB4E3A06E412815BA462BC1 /* Pods */,
+				BD3B1BE48D66B0640877F9C9B8E652AF /* Products */,
 				15D1D166EF4653C7D520A0E63792A7FB /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		9DD5187922E73DEF257027201193E120 /* TTADataPickerView */ = {
+		8E5919F4C59DEF175659B3CB035A27B9 /* Alamofire */ = {
 			isa = PBXGroup;
 			children = (
-				C1CCDD08B590568A7E10148CF479FD95 /* TTADataPickerTitleBarButtonItem.swift */,
-				AB9D7A36C3899AA1E2953A04D6BA8449 /* TTADataPickerToolBar.swift */,
-				77B0535ED7D1023D02F99A6E9BACC606 /* TTADataPickerView.swift */,
-				226B173ADFC3AAA94EFBBCA1B6A6FCB9 /* TTADataPickerViewController.swift */,
-				5837049D80C271C725C83FC3EA3E19B0 /* Support Files */,
+				478E41420F4A7D3791F5D4A6B3E53BC6 /* AFError.swift */,
+				648462A6BF4160E6000EF7A116ABE8B1 /* Alamofire.swift */,
+				62E386CEE14A66C11E1903AB1ED89532 /* DispatchQueue+Alamofire.swift */,
+				A8B931DE5039415A8EE806598CAFA2E3 /* MultipartFormData.swift */,
+				ED8E46638126BA0EE802629C81A48DC4 /* NetworkReachabilityManager.swift */,
+				FD5FEE830FE24498C1DCBBB0A8E08140 /* Notifications.swift */,
+				FDA7696F08174AA8E0E8E7F56A009D3C /* ParameterEncoding.swift */,
+				A2840D4E9C267A2B35EBC7B221C9503A /* Request.swift */,
+				A7FC72B18A416709CCBB3A7D38A0EA57 /* Response.swift */,
+				C08954EB7D906DEB4190C2058D2A2913 /* ResponseSerialization.swift */,
+				959E501FA60ABB6762A8BB8A179C5157 /* Result.swift */,
+				2D4E64F9622983ED339C06B4144D8A4A /* ServerTrustPolicy.swift */,
+				00533053132FD9E4D83DCC7B940223B9 /* SessionDelegate.swift */,
+				2567B1A30659B1E21F3C960FD604C120 /* SessionManager.swift */,
+				19E29BA3886D9FCB89B6AE3494F60468 /* TaskDelegate.swift */,
+				3BD082CE92D6AD3C221A84EAFF29491D /* Timeline.swift */,
+				8981DB6EEEC1ED56913F4579E44C5E4C /* Validation.swift */,
+				3CCCAADE2C4B6B3C562387C59A01909A /* Support Files */,
 			);
-			name = TTADataPickerView;
-			path = TTADataPickerView;
+			name = Alamofire;
+			path = Alamofire;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -148,19 +220,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CBB3D3BC4C5C4774C5CB21E3F1EB2479 /* Products */ = {
+		BD3B1BE48D66B0640877F9C9B8E652AF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BACC5BC264B28FD91E987D18F2712147 /* Pods_MovieSuggestor.framework */,
-				A3FC112433078DF7F50991CB409931D6 /* TTADataPickerView.framework */,
+				1CBC6D700FAD0F3FCEC1345A4C06BF3A /* Alamofire.framework */,
+				155C6E01E482D69E213B85EAB70305E3 /* Pods_MovieSuggestor.framework */,
+				CE7AE639D8EBCDC24DFDBBEFB0CF5D41 /* TTADataPickerView.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D0FA0871C43234D0F2FE8CC273963AE6 /* Pods */ = {
+		BF6CA5A88CB4E3A06E412815BA462BC1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9DD5187922E73DEF257027201193E120 /* TTADataPickerView */,
+				8E5919F4C59DEF175659B3CB035A27B9 /* Alamofire */,
+				F542106AA59C663EFB3960A3D9371917 /* TTADataPickerView */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -173,53 +247,70 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		F542106AA59C663EFB3960A3D9371917 /* TTADataPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				B1BC99299D10AA4A56DFC9176B42F8F9 /* TTADataPickerTitleBarButtonItem.swift */,
+				9FC0A1717976E1D736C2E59CD621AB23 /* TTADataPickerToolBar.swift */,
+				95A269AA262A829ADFA701C05F303613 /* TTADataPickerView.swift */,
+				BC3A8EBE75A64226F0AFF0CB573CBD26 /* TTADataPickerViewController.swift */,
+				F9B5FD4C4ECA55FCA369C2BF5D958B68 /* Support Files */,
+			);
+			name = TTADataPickerView;
+			path = TTADataPickerView;
+			sourceTree = "<group>";
+		};
+		F9B5FD4C4ECA55FCA369C2BF5D958B68 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E7562EBA0DF9FD1273C76375AA09DD75 /* Info.plist */,
+				E7B3F87FB9194F2AD4B7002BDD95495C /* TTADataPickerView.modulemap */,
+				D35BD641ABBFDB901ACB4933450833B8 /* TTADataPickerView.xcconfig */,
+				CBD3C8852DE69FCD7AE4960AA907F6D9 /* TTADataPickerView-dummy.m */,
+				7220C6EF96F427AD2D774E98BFC15AB7 /* TTADataPickerView-prefix.pch */,
+				9347D41C4097F2D59EA73FE048289C33 /* TTADataPickerView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TTADataPickerView";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1638181BD069B664CC26FBC855D2CBA5 /* Headers */ = {
+		810EFE08ACF06FBD50B84C5D746F22BB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0DC16A9450CBB4CD85C6C03681761C0 /* TTADataPickerView-umbrella.h in Headers */,
+				ACD5977E62364819DAB64D84790CD9FC /* Pods-MovieSuggestor-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1C934727147BB175AF83661DD8BE5C62 /* Headers */ = {
+		B4002B6E97835FDCCAA5963EFE09A3E0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1B9CF8821E52D4F0A5959B767C55753 /* Pods-MovieSuggestor-umbrella.h in Headers */,
+				1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAFEDDE5A8EFE2D8C7EC439091F00CA8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				875AFFE5476C70D911F7E781E7D7AA28 /* TTADataPickerView-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		9781B9C6A13D51A85E5EE375DA3F5B43 /* Pods-MovieSuggestor */ = {
+		472BFA9A2AB042629F53E23BCFB554D9 /* TTADataPickerView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DE2D76BCDCABF4BD141DB5F18760F0C1 /* Build configuration list for PBXNativeTarget "Pods-MovieSuggestor" */;
+			buildConfigurationList = 4B0F77107451DBED293C4851D9AAABA7 /* Build configuration list for PBXNativeTarget "TTADataPickerView" */;
 			buildPhases = (
-				84C297BDD7DAD603F0D531FA49A5B52B /* Sources */,
-				6D96BFC48FFBF2FC725AF22733A1432A /* Frameworks */,
-				1C934727147BB175AF83661DD8BE5C62 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7CC4F584BDABFE49CD2CB73179BDA659 /* PBXTargetDependency */,
-			);
-			name = "Pods-MovieSuggestor";
-			productName = "Pods-MovieSuggestor";
-			productReference = BACC5BC264B28FD91E987D18F2712147 /* Pods_MovieSuggestor.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		9DB8EA7F6F1A17A25DE642BFA2ECBDE6 /* TTADataPickerView */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B18A14AD8A5B8C73CA4B1250C327983C /* Build configuration list for PBXNativeTarget "TTADataPickerView" */;
-			buildPhases = (
-				125C94F2399DC84DCCF47C961D9B216D /* Sources */,
-				38C5EE43D6CA7E65D3315F3087758B04 /* Frameworks */,
-				1638181BD069B664CC26FBC855D2CBA5 /* Headers */,
+				4E6B487EDA8B3300E5DF6E9A350E153A /* Sources */,
+				6F4811B6C5EB25CB15B0791AAAB194F8 /* Frameworks */,
+				BAFEDDE5A8EFE2D8C7EC439091F00CA8 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -227,7 +318,43 @@
 			);
 			name = TTADataPickerView;
 			productName = TTADataPickerView;
-			productReference = A3FC112433078DF7F50991CB409931D6 /* TTADataPickerView.framework */;
+			productReference = CE7AE639D8EBCDC24DFDBBEFB0CF5D41 /* TTADataPickerView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 419E5D95491847CD79841B971A8A3277 /* Build configuration list for PBXNativeTarget "Alamofire" */;
+			buildPhases = (
+				32B9974868188C4803318E36329C87FE /* Sources */,
+				99195E4207764744AEC07ECCBCD550EB /* Frameworks */,
+				B4002B6E97835FDCCAA5963EFE09A3E0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Alamofire;
+			productName = Alamofire;
+			productReference = 1CBC6D700FAD0F3FCEC1345A4C06BF3A /* Alamofire.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F3DCAAFB23591A1B5A6DDA9ADD1404A9 /* Pods-MovieSuggestor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 155676329C0F8DF2291B070734410CA6 /* Build configuration list for PBXNativeTarget "Pods-MovieSuggestor" */;
+			buildPhases = (
+				838BEFD647AEEFB5D0D8624128578050 /* Sources */,
+				7EEDDB362D4274901AB2B133DFFFB5B5 /* Frameworks */,
+				810EFE08ACF06FBD50B84C5D746F22BB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C9AEC2ED6D66BB744B06B6CDF212402 /* PBXTargetDependency */,
+				D5992989D3C3DE66EC34D3910DF3B1FB /* PBXTargetDependency */,
+			);
+			name = "Pods-MovieSuggestor";
+			productName = "Pods-MovieSuggestor";
+			productReference = 155C6E01E482D69E213B85EAB70305E3 /* Pods_MovieSuggestor.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -247,52 +374,84 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = CBB3D3BC4C5C4774C5CB21E3F1EB2479 /* Products */;
+			productRefGroup = BD3B1BE48D66B0640877F9C9B8E652AF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9781B9C6A13D51A85E5EE375DA3F5B43 /* Pods-MovieSuggestor */,
-				9DB8EA7F6F1A17A25DE642BFA2ECBDE6 /* TTADataPickerView */,
+				88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */,
+				F3DCAAFB23591A1B5A6DDA9ADD1404A9 /* Pods-MovieSuggestor */,
+				472BFA9A2AB042629F53E23BCFB554D9 /* TTADataPickerView */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		125C94F2399DC84DCCF47C961D9B216D /* Sources */ = {
+		32B9974868188C4803318E36329C87FE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48A08F7D8B00B82CE8EAE5CE4585C32E /* TTADataPickerTitleBarButtonItem.swift in Sources */,
-				39F888CAA473C1B633EDBF2409246438 /* TTADataPickerToolBar.swift in Sources */,
-				BD190B476AF73E23355BDAEC6E7789F3 /* TTADataPickerView-dummy.m in Sources */,
-				E4F65A744E0E782DF436FA1A687C9A1B /* TTADataPickerView.swift in Sources */,
-				D065E046FDFD64534666AAAE1F6A728F /* TTADataPickerViewController.swift in Sources */,
+				9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */,
+				A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */,
+				F8B3D3092ED0417E8CDF32033F6122F5 /* Alamofire.swift in Sources */,
+				61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */,
+				B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */,
+				A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */,
+				EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */,
+				BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */,
+				5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */,
+				CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */,
+				F6BECD98B97CBFEBE2C96F0E9E72A6C0 /* ResponseSerialization.swift in Sources */,
+				7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */,
+				62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */,
+				7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */,
+				AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */,
+				3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */,
+				10EB23E9ECC4B33E16933BB1EA560B6A /* Timeline.swift in Sources */,
+				BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		84C297BDD7DAD603F0D531FA49A5B52B /* Sources */ = {
+		4E6B487EDA8B3300E5DF6E9A350E153A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F74CF3786184EF007B481CEBEB4E999 /* Pods-MovieSuggestor-dummy.m in Sources */,
+				4DC1BBED85613DF41547817A1E88FFC3 /* TTADataPickerTitleBarButtonItem.swift in Sources */,
+				505D6D1077982FE90BEEC3BDA141D7F8 /* TTADataPickerToolBar.swift in Sources */,
+				35B4D60A69F5BB07A1A204097A5EAE87 /* TTADataPickerView-dummy.m in Sources */,
+				A58DF78608670912034B41F0F0AC73C8 /* TTADataPickerView.swift in Sources */,
+				934F06D2E15E331DFD18438F67CE7309 /* TTADataPickerViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		838BEFD647AEEFB5D0D8624128578050 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7463FBF7F89E38D15212660E77E11008 /* Pods-MovieSuggestor-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7CC4F584BDABFE49CD2CB73179BDA659 /* PBXTargetDependency */ = {
+		5C9AEC2ED6D66BB744B06B6CDF212402 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = 88E9EC28B8B46C3631E6B242B50F4442 /* Alamofire */;
+			targetProxy = E3C967DC8417AA1412CE8330FCEC3A08 /* PBXContainerItemProxy */;
+		};
+		D5992989D3C3DE66EC34D3910DF3B1FB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TTADataPickerView;
-			target = 9DB8EA7F6F1A17A25DE642BFA2ECBDE6 /* TTADataPickerView */;
-			targetProxy = 9E0A8174E6AAC1B643061842D3AD28AE /* PBXContainerItemProxy */;
+			target = 472BFA9A2AB042629F53E23BCFB554D9 /* TTADataPickerView */;
+			targetProxy = 2D6BCC645C507CCADFEC533C4172C100 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		16D480547550039CE227EF659A58D5F7 /* Debug */ = {
+		099023E320154E6F5B78BE0DC3B0DB0E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CF07A0A096682A0EC8096E47C819CE04 /* TTADataPickerView.xcconfig */;
+			baseConfigurationReference = D35BD641ABBFDB901ACB4933450833B8 /* TTADataPickerView.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -314,6 +473,45 @@
 				MODULEMAP_FILE = "Target Support Files/TTADataPickerView/TTADataPickerView.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = TTADataPickerView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		18F2AA0E2F512D2F200A2DB578993685 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78FFCE07B436FADAAE83A75F1C6B6AD2 /* Pods-MovieSuggestor.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-MovieSuggestor/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MovieSuggestor/Pods-MovieSuggestor.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_MovieSuggestor;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -373,80 +571,7 @@
 			};
 			name = Debug;
 		};
-		69F5E75666EB7B4EE567D8DA74DB7901 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 78FFCE07B436FADAAE83A75F1C6B6AD2 /* Pods-MovieSuggestor.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-MovieSuggestor/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MovieSuggestor/Pods-MovieSuggestor.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_MovieSuggestor;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		7C4EE75EE40BE03699942E889C5E95F6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CF07A0A096682A0EC8096E47C819CE04 /* TTADataPickerView.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/TTADataPickerView/TTADataPickerView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TTADataPickerView/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TTADataPickerView/TTADataPickerView.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = TTADataPickerView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		B920A89043FDB507CA595FE4EF9681ED /* Release */ = {
+		7913FF14596D54421A7613BF16C498EA /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2E9204926034B60E678DA8DF5171CD4B /* Pods-MovieSuggestor.release.xcconfig */;
 			buildSettings = {
@@ -474,6 +599,40 @@
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = Pods_MovieSuggestor;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7D072D0D174F12EAACC1862DA756E67A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 704D1562420D0F1E323FDDA65A3962CC /* Alamofire.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Alamofire;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -528,9 +687,87 @@
 			};
 			name = Release;
 		};
+		C9660A42FEDD040185578ADA021EC8E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 704D1562420D0F1E323FDDA65A3962CC /* Alamofire.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D00C037DB0339AA4A4C7A599CB046205 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D35BD641ABBFDB901ACB4933450833B8 /* TTADataPickerView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TTADataPickerView/TTADataPickerView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TTADataPickerView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TTADataPickerView/TTADataPickerView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = TTADataPickerView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		155676329C0F8DF2291B070734410CA6 /* Build configuration list for PBXNativeTarget "Pods-MovieSuggestor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18F2AA0E2F512D2F200A2DB578993685 /* Debug */,
+				7913FF14596D54421A7613BF16C498EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -540,20 +777,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B18A14AD8A5B8C73CA4B1250C327983C /* Build configuration list for PBXNativeTarget "TTADataPickerView" */ = {
+		419E5D95491847CD79841B971A8A3277 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				16D480547550039CE227EF659A58D5F7 /* Debug */,
-				7C4EE75EE40BE03699942E889C5E95F6 /* Release */,
+				C9660A42FEDD040185578ADA021EC8E0 /* Debug */,
+				7D072D0D174F12EAACC1862DA756E67A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DE2D76BCDCABF4BD141DB5F18760F0C1 /* Build configuration list for PBXNativeTarget "Pods-MovieSuggestor" */ = {
+		4B0F77107451DBED293C4851D9AAABA7 /* Build configuration list for PBXNativeTarget "TTADataPickerView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				69F5E75666EB7B4EE567D8DA74DB7901 /* Debug */,
-				B920A89043FDB507CA595FE4EF9681ED /* Release */,
+				099023E320154E6F5B78BE0DC3B0DB0E /* Debug */,
+				D00C037DB0339AA4A4C7A599CB046205 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
