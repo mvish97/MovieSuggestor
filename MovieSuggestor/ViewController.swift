@@ -22,6 +22,8 @@ class ViewController: UIViewController, TTADataPickerViewDelegate {
     var genreArray: [MovieModel] = []
     var selectedGenre: String = ""
     
+    var mainColor = UIColor(red: 66/255, green: 148/255, blue: 247/255, alpha: 1.0)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,8 +45,11 @@ class ViewController: UIViewController, TTADataPickerViewDelegate {
         
         pickerView.selectedTitles(titles)
         
-        pickerView.setTitleColor(color: .blue)
-        pickerView.setTitleFont(font: UIFont(name: "Avenir", size: 16)!)
+        pickerView.setTitleColor(color: mainColor)
+        pickerView.setTitleFont(font: UIFont(name: "Avenir", size: 18)!)
+        pickerView.setToolBarTintColor(color: mainColor)
+        pickerView.setToolBarBarTintColor(color: UIColor.black)
+        pickerView.backgroundColor = mainColor
         
         pickerView.show()
     }
@@ -98,7 +103,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        return 175
     }
     
 }
