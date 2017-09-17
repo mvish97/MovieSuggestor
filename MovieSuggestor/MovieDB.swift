@@ -58,9 +58,9 @@ class MovieDB {
         }
     }
     
-    func getMovieList(genreID: Int) {
+    func getMovieList(genreID: Int, page: Int) {
         
-        let url = BASE_URL + "/discover/movie?" + API_KEY + LANG + "&sort_by=popularity.desc&include_adult=true&page=1&with_genres=\(genreID)"
+        let url = BASE_URL + "/discover/movie?" + API_KEY + LANG + "&sort_by=popularity.desc&include_adult=true&page=\(page)&with_genres=\(genreID)"
         
         self.movieList = []
         Alamofire.request(url).responseJSON { response in

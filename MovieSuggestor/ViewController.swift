@@ -14,6 +14,7 @@ class ViewController: UIViewController, TTADataPickerViewDelegate, TransferData,
     @IBOutlet weak var genreButton: UIButton!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var getSuggestions: UIButton!
     
     let pickerView = TTADataPickerView(title: "Genres", type: .text, delegate: nil)
     var genres = [GenreModel]() // List of Genres and their ids
@@ -28,6 +29,7 @@ class ViewController: UIViewController, TTADataPickerViewDelegate, TransferData,
     
     var selectedGenre: String = ""
     var selectedRating: Int = 5
+    var selectedPage: Int = 1
     
     var mainColor = UIColor(red: 66/255, green: 148/255, blue: 247/255, alpha: 1.0)
     
@@ -52,8 +54,11 @@ class ViewController: UIViewController, TTADataPickerViewDelegate, TransferData,
     func transferMovies(data: [MovieModel]) { // Getting the movie list
         movieArray = []
         movieArray = data
-        
         filterForRatings() // FILTER
+        
+        if getSuggestions.titleLabel?.text == "Get More Suggestions" {
+            tableView.reloadData()
+        }
     }
     
     func processMovieArray() -> [String] {
@@ -94,21 +99,32 @@ class ViewController: UIViewController, TTADataPickerViewDelegate, TransferData,
     }
 
     func dataPickerView(_ pickerView: TTADataPickerView, didSelectTitles titles: [String]) {
-        genreButton.setTitle(titles[0], for: .normal)
-        selectedGenre = titles[0] // The genre the user selected
-        
-        self.backend.getMovieList(genreID: getGenreID(genre: selectedGenre))
+        if selectedGenre != titles[0] {
+            genreButton.setTitle(titles[0], for: .normal)
+            selectedGenre = titles[0] // The genre the user selected
+            
+            selectedPage = 1
+            getSuggestions.setTitle("Get Suggestions", for: .normal)
+            self.backend.getMovieList(genreID: getGenreID(genre: selectedGenre), page: selectedPage)
+        }
     }
     
     @IBAction func findMoviesPressed(_ sender: UIButton) {
         
-        tableView.reloadData()
+        if getSuggestions.titleLabel?.text == "Get Suggestions" {
+            getSuggestions.setTitle("Get More Suggestions", for: .normal)
+            tableView.reloadData()
+        }
+        else {
+            selectedPage += 1
+            self.backend.getMovieList(genreID: getGenreID(genre: selectedGenre), page: selectedPage)
+        }
     }
     
 }
 
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension ViewController: UITableViewDelegate, UITableViewDataSource { // Tableview functions
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath) as? MovieCell {
@@ -131,7 +147,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 extension ViewController { // HELPER FUNCTIONS
     
     
-    func getGenreList() -> [String] {
+    func getGenreList() -> [String] { // Used for testing
         // Separates the genre names from the Genre Objects
         var list: [String] = []
         
@@ -142,7 +158,7 @@ extension ViewController { // HELPER FUNCTIONS
     }
     
     func getGenreID(genre: String) -> Int {
-        
+        // Gets the id of the genre the user chose
         for i in genres {
             if i.name == genre {
                 return i.id
@@ -152,7 +168,7 @@ extension ViewController { // HELPER FUNCTIONS
     }
     
     func filterForRatings() {
-        
+        // Functions filters the movies based the min rating the user chose
         genreArray = []
         
         for mov in movieArray {
@@ -176,6 +192,11 @@ class MovieCell: UITableViewCell {
         nameLabel.text = movie.name
         durationLabel.text = movie.year
         ratingLabel.text = "\(movie.rating) / 10"
+    }
+    
+    func getYear(date: String) -> String {
+        let index = date.index(date.index, offsetBy: 4)
+        return date.substring
     }
     
     
