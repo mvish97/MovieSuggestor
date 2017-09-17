@@ -62,7 +62,7 @@ class MovieDB {
         
         let url = BASE_URL + "/discover/movie?" + API_KEY + LANG + "&sort_by=popularity.desc&include_adult=true&page=1&with_genres=\(genreID)"
         
-        print("MOVIE REQUEST SENT")
+        self.movieList = []
         Alamofire.request(url).responseJSON { response in
             if let result = response.result.value as? Dictionary<String,Any> {
                 if let list = result["results"] as? [Dictionary<String,Any>] {

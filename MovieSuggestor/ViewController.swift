@@ -27,7 +27,7 @@ class ViewController: UIViewController, TTADataPickerViewDelegate, TransferData,
     
     
     var selectedGenre: String = ""
-    var selectedRating: Int = 0
+    var selectedRating: Int = 5
     
     var mainColor = UIColor(red: 66/255, green: 148/255, blue: 247/255, alpha: 1.0)
     
@@ -50,8 +50,21 @@ class ViewController: UIViewController, TTADataPickerViewDelegate, TransferData,
     }
     
     func transferMovies(data: [MovieModel]) { // Getting the movie list
+        movieArray = []
         movieArray = data
-        print("DELEGATE", movieArray)
+        
+        filterForRatings() // FILTER
+    }
+    
+    func processMovieArray() -> [String] {
+        
+        var list: [String] = []
+        
+        for i in genreArray {
+            list.append(i.name)
+        }
+        
+        return list
     }
 
     @IBAction func selectGenre(_ sender: UIButton) {
@@ -73,15 +86,17 @@ class ViewController: UIViewController, TTADataPickerViewDelegate, TransferData,
     }
     
     @IBAction func selectRating(_ sender: UISlider) {
+        
         selectedRating = Int(sender.value) // The rating the user selected
         ratingLabel.text =  "\(selectedRating)"
+        
+        filterForRatings() // FILTER
     }
 
     func dataPickerView(_ pickerView: TTADataPickerView, didSelectTitles titles: [String]) {
         genreButton.setTitle(titles[0], for: .normal)
         selectedGenre = titles[0] // The genre the user selected
         
-        print("GENRE CHOSEN")
         self.backend.getMovieList(genreID: getGenreID(genre: selectedGenre))
     }
     
@@ -97,14 +112,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath) as? MovieCell {
-            cell.updateUI(movie: movieArray[indexPath.row])
+            cell.updateUI(movie: genreArray[indexPath.row])
             return cell
         }
         return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return movieArray.count
+        return genreArray.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -136,6 +151,16 @@ extension ViewController { // HELPER FUNCTIONS
         return 0
     }
     
+    func filterForRatings() {
+        
+        genreArray = []
+        
+        for mov in movieArray {
+            if mov.rating >= Double(selectedRating) {
+                genreArray.append(mov)
+            }
+        }
+    }
     
 }
 
@@ -150,7 +175,7 @@ class MovieCell: UITableViewCell {
         posterImage.image = movie.poster
         nameLabel.text = movie.name
         durationLabel.text = movie.year
-        ratingLabel.text = "\(movie.rating)/10"
+        ratingLabel.text = "\(movie.rating) / 10"
     }
     
     
