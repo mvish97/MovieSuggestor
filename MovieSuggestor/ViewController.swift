@@ -52,7 +52,7 @@ class ViewController: UIViewController, TTADataPickerViewDelegate, TransferData,
     }
     
     func transferMovies(data: [MovieModel]) { // Getting the movie list
-        movieArray = []
+        //movieArray = []
         movieArray = data
         filterForRatings() // FILTER
         
@@ -61,7 +61,7 @@ class ViewController: UIViewController, TTADataPickerViewDelegate, TransferData,
         }
     }
     
-    func processMovieArray() -> [String] {
+    func processMovieArray() -> [String] { // for testing
         
         var list: [String] = []
         
@@ -190,13 +190,13 @@ class MovieCell: UITableViewCell {
     func updateUI(movie: MovieModel) {
         posterImage.image = movie.poster
         nameLabel.text = movie.name
-        durationLabel.text = movie.year
+        durationLabel.text = getYear(date: movie.year)
         ratingLabel.text = "\(movie.rating) / 10"
     }
     
     func getYear(date: String) -> String {
-        let index = date.index(date.index, offsetBy: 4)
-        return date.substring
+        let index = date.index(date.startIndex, offsetBy: 4)
+        return date.substring(to: index)
     }
     
     
