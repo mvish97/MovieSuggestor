@@ -9,7 +9,7 @@
 import UIKit
 import TTADataPickerView
 
-class ViewController: UIViewController, TTADataPickerViewDelegate, TransferData {
+class ViewController: UIViewController, TTADataPickerViewDelegate, TransferData, TransferMovies {
 
     @IBOutlet weak var genreButton: UIButton!
     @IBOutlet weak var ratingLabel: UILabel!
@@ -37,16 +37,21 @@ class ViewController: UIViewController, TTADataPickerViewDelegate, TransferData 
         tableView.delegate = self
         tableView.dataSource = self
         
-        populateMovies() // TEMP
-        
         
         backend.delegate = self
         backend.getGenreList()
+        
+        backend.movieDelegate = self
     }
     
     func transferData(data: [GenreModel]) { // Getting the genre list
         genres = data
         genreNames = getGenreList()
+    }
+    
+    func transferMovies(data: [MovieModel]) { // Getting the movie list
+        movieArray = data
+        print("DELEGATE", movieArray)
     }
 
     @IBAction func selectGenre(_ sender: UIButton) {
@@ -75,20 +80,16 @@ class ViewController: UIViewController, TTADataPickerViewDelegate, TransferData 
     func dataPickerView(_ pickerView: TTADataPickerView, didSelectTitles titles: [String]) {
         genreButton.setTitle(titles[0], for: .normal)
         selectedGenre = titles[0] // The genre the user selected
+        
+        print("GENRE CHOSEN")
+        self.backend.getMovieList(genreID: getGenreID(genre: selectedGenre))
     }
     
     @IBAction func findMoviesPressed(_ sender: UIButton) {
         
-        processGenre()
-        
         tableView.reloadData()
     }
     
-    func populateMovies() { // TEMP
-        movieArray = [MovieModel(poster: #imageLiteral(resourceName: "wonder woman"), name: "Wonder Woman", duration: "2 hr 21 min", rating: 7.7, genre: "Action"),
-                      MovieModel(poster: #imageLiteral(resourceName: "the big sick"), name: "The Big Sick", duration: "2 hr", rating: 8.0, genre: "Rom Com"),
-                      MovieModel(poster: #imageLiteral(resourceName: "guardians 2"), name: "Guardians of the Galaxy Vol. 2", duration: "2 hr 16 min", rating: 7.9, genre: "Adventure")]
-    }
 }
 
 
@@ -96,14 +97,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath) as? MovieCell {
-            cell.updateUI(movie: genreArray[indexPath.row])
+            cell.updateUI(movie: movieArray[indexPath.row])
             return cell
         }
         return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return genreArray.count
+        return movieArray.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -114,15 +115,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension ViewController { // HELPER FUNCTIONS
     
-    func processGenre() {
-        genreArray = []
-        
-        for i in movieArray {
-            if i.genre == selectedGenre {
-                genreArray.append(i)
-            }
-        }
-    }
     
     func getGenreList() -> [String] {
         // Separates the genre names from the Genre Objects
@@ -132,6 +124,16 @@ extension ViewController { // HELPER FUNCTIONS
             list.append(i.name)
         }
         return list
+    }
+    
+    func getGenreID(genre: String) -> Int {
+        
+        for i in genres {
+            if i.name == genre {
+                return i.id
+            }
+        }
+        return 0
     }
     
     
@@ -147,7 +149,7 @@ class MovieCell: UITableViewCell {
     func updateUI(movie: MovieModel) {
         posterImage.image = movie.poster
         nameLabel.text = movie.name
-        durationLabel.text = movie.duration
+        durationLabel.text = movie.year
         ratingLabel.text = "\(movie.rating)/10"
     }
     

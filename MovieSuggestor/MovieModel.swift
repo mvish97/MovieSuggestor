@@ -12,10 +12,10 @@ import UIKit
 class MovieModel {
     
     private var _poster: UIImage!
-    private var _name: String!
-    private var _duration: String!
-    private var _rating: Double!
-    private var _genre: String!
+    private var _name: String! // original_title
+    private var _overview: String! // overview
+    private var _rating: Double! // vote_average
+    private var _year: String!
     
     var poster: UIImage {
         return _poster
@@ -28,11 +28,11 @@ class MovieModel {
         return _name
     }
     
-    var duration: String {
-        if _duration == nil {
-            _duration = ""
+    var overview: String {
+        if _overview == nil {
+            _overview = ""
         }
-        return _duration
+        return _overview
     }
     
     var rating: Double {
@@ -42,19 +42,19 @@ class MovieModel {
         return _rating
     }
     
-    var genre: String {
-        if _genre == nil {
-            _genre = ""
+    var year: String {
+        if _year == nil {
+            _year = ""
         }
-        return _genre
+        return _year
     }
     
-    init(poster: UIImage, name: String, duration: String, rating: Double, genre: String) {
+    init(poster: UIImage, name: String, overview: String, rating: Double, year: String) {
         _poster = poster
         _name = name
-        _duration = duration
+        _overview = overview
         _rating = rating
-        _genre = genre
+        _year = year
     }
 }
 

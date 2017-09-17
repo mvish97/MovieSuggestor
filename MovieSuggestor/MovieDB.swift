@@ -8,9 +8,14 @@
 
 import Foundation
 import Alamofire
+import UIKit
 
 protocol TransferData {
     func transferData(data: [GenreModel])
+}
+
+protocol TransferMovies {
+    func transferMovies(data: [MovieModel])
 }
 
 class MovieDB {
@@ -24,9 +29,11 @@ class MovieDB {
     
     let IMAGE_URL = "https://image.tmdb.org/t/p/w500/"
     
-    var genreList: [GenreModel] = []
-    
     var delegate: TransferData? = nil
+    var movieDelegate: TransferMovies? = nil
+    
+    var genreList: [GenreModel] = []
+    var movieList: [MovieModel] = []
     
     func getGenreList() {
         
@@ -48,6 +55,39 @@ class MovieDB {
                     }
                 }
             }
+        }
+    }
+    
+    func getMovieList(genreID: Int) {
+        
+        let url = BASE_URL + "/discover/movie?" + API_KEY + LANG + "&sort_by=popularity.desc&include_adult=true&page=1&with_genres=\(genreID)"
+        
+        print("MOVIE REQUEST SENT")
+        Alamofire.request(url).responseJSON { response in
+            if let result = response.result.value as? Dictionary<String,Any> {
+                if let list = result["results"] as? [Dictionary<String,Any>] {
+                    for i in list {
+                        //print(i["title"]!, i["vote_average"]!)
+                        
+                        self.movieList.append(MovieModel(poster: #imageLiteral(resourceName: "wonder woman"), name: i["title"] as! String, overview: i["overview"] as! String, rating: i["vote_average"] as! Double, year: i["release_date"] as! String))
+                        
+                        //self.getMoviePoster(url: "\(self.IMAGE_URL)\(i["poster_path"]!)")
+                        
+                    }
+                    
+                    if let del = self.movieDelegate {
+                        del.transferMovies(data: self.movieList)
+                    }
+                   
+                }
+            }
+        }
+    }
+    
+    
+    func getMoviePoster(url: String) {
+        Alamofire.request(url).responseJSON { response in
+            //print(response.result.value)
         }
     }
 }
