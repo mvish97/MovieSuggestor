@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		054488C21F6F02EE00383D4D /* VCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054488C11F6F02EE00383D4D /* VCExtension.swift */; };
+		054488C41F6F067200383D4D /* MovieInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054488C31F6F067200383D4D /* MovieInfoVC.swift */; };
 		059B5AA31F6CADDC005AA9BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059B5AA21F6CADDC005AA9BB /* AppDelegate.swift */; };
 		059B5AA51F6CADDC005AA9BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059B5AA41F6CADDC005AA9BB /* ViewController.swift */; };
 		059B5AA81F6CADDC005AA9BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 059B5AA61F6CADDC005AA9BB /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		054488C11F6F02EE00383D4D /* VCExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCExtension.swift; sourceTree = "<group>"; };
+		054488C31F6F067200383D4D /* MovieInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieInfoVC.swift; sourceTree = "<group>"; };
 		059B5A9F1F6CADDC005AA9BB /* MovieSuggestor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieSuggestor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		059B5AA21F6CADDC005AA9BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		059B5AA41F6CADDC005AA9BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 			children = (
 				059B5AA21F6CADDC005AA9BB /* AppDelegate.swift */,
 				059B5AA41F6CADDC005AA9BB /* ViewController.swift */,
+				054488C11F6F02EE00383D4D /* VCExtension.swift */,
+				054488C31F6F067200383D4D /* MovieInfoVC.swift */,
 				059B5AB81F6DC0DE005AA9BB /* MovieDB.swift */,
 				059B5AB61F6CF122005AA9BB /* MovieModel.swift */,
 				059B5AB41F6CBA58005AA9BB /* MaterialView.swift */,
@@ -223,6 +229,8 @@
 			files = (
 				059B5AB71F6CF122005AA9BB /* MovieModel.swift in Sources */,
 				059B5AB51F6CBA58005AA9BB /* MaterialView.swift in Sources */,
+				054488C41F6F067200383D4D /* MovieInfoVC.swift in Sources */,
+				054488C21F6F02EE00383D4D /* VCExtension.swift in Sources */,
 				059B5AA51F6CADDC005AA9BB /* ViewController.swift in Sources */,
 				059B5AB91F6DC0DE005AA9BB /* MovieDB.swift in Sources */,
 				059B5AA31F6CADDC005AA9BB /* AppDelegate.swift in Sources */,

@@ -27,7 +27,7 @@ class MovieDB {
     
     let LANG = "&language=en-US"
     
-    let IMAGE_URL = "https://image.tmdb.org/t/p/w500/"
+    let IMAGE_URL = "https://image.tmdb.org/t/p/w500"
     
     var delegate: TransferData? = nil
     var movieDelegate: TransferMovies? = nil
@@ -44,10 +44,8 @@ class MovieDB {
             if let result = response.result.value as? Dictionary<String,Any> {
                 if let list = result["genres"] as? [Dictionary<String,Any>] {
                     for dict in list {
-                        let temp_id = dict["id"] as! Int!
-                        let temp_name = dict["name"] as! String!
                         
-                        self.genreList.append(GenreModel(name: temp_name! , id: temp_id!))
+                        self.genreList.append(GenreModel(name: dict["name"] as! String , id: dict["id"] as! Int))
                     }
                     
                     if let del = self.delegate {
@@ -66,12 +64,19 @@ class MovieDB {
         Alamofire.request(url).responseJSON { response in
             if let result = response.result.value as? Dictionary<String,Any> {
                 if let list = result["results"] as? [Dictionary<String,Any>] {
+                    
                     for i in list {
-                        //print(i["title"]!, i["vote_average"]!)
                         
-                        self.movieList.append(MovieModel(poster: #imageLiteral(resourceName: "wonder woman"), name: i["title"] as! String, overview: i["overview"] as! String, rating: i["vote_average"] as! Double, year: i["release_date"] as! String))
+                        self.movieList.append(MovieModel(poster: UIImage(),
+                                                         name: i["title"] as! String,
+                                                         overview: i["overview"] as! String,
+                                                         rating: i["vote_average"] as! Double,
+                                                         year: i["release_date"] as! String,
+                                                         posterLink: "\(self.IMAGE_URL)\(i["poster_path"] as! String)",
+                                                         backLink: "\(self.IMAGE_URL)\(i["backdrop_path"] as! String)"))
                         
-                        //self.getMoviePoster(url: "\(self.IMAGE_URL)\(i["poster_path"]!)")
+                        //print("POSTER","\(self.IMAGE_URL)\(i["poster_path"] as! String)")
+                        //print("BACKGROUND", "\(self.IMAGE_URL)\(i["backdrop_path"] as! String)")
                         
                     }
                     
@@ -86,8 +91,19 @@ class MovieDB {
     
     
     func getMoviePoster(url: String) {
-        Alamofire.request(url).responseJSON { response in
-            //print(response.result.value)
+        let imageURL = URL(string: url)!
+        
+        
+        DispatchQueue.global().async {
+            do {
+                //let data = try Data(contentsOf: imageURL)
+                DispatchQueue.global().sync {
+                    
+                }
+            }
+            catch  {
+                //handle the error
+            }
         }
     }
 }

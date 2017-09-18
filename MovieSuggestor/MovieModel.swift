@@ -16,6 +16,8 @@ class MovieModel {
     private var _overview: String! // overview
     private var _rating: Double! // vote_average
     private var _year: String!
+    private var _posterLink: String!
+    private var _backgroundLink: String!
     
     var poster: UIImage {
         return _poster
@@ -49,12 +51,28 @@ class MovieModel {
         return _year
     }
     
-    init(poster: UIImage, name: String, overview: String, rating: Double, year: String) {
+    var posterLink: String {
+        if _posterLink == nil {
+            _posterLink = ""
+        }
+        return _posterLink
+    }
+    
+    var backgrounLink: String {
+        if _backgroundLink == nil {
+            _backgroundLink = ""
+        }
+        return _backgroundLink
+    }
+    
+    init(poster: UIImage, name: String, overview: String, rating: Double, year: String, posterLink: String, backLink: String) {
         _poster = poster
         _name = name
         _overview = overview
         _rating = rating
         _year = year
+        _posterLink = posterLink
+        _backgroundLink = backLink
     }
 }
 
