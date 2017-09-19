@@ -12,6 +12,7 @@ import UIKit
 class MovieModel {
     
     private var _poster: UIImage!
+    private var _background: UIImage!
     private var _name: String! // original_title
     private var _overview: String! // overview
     private var _rating: Double! // vote_average
@@ -21,6 +22,15 @@ class MovieModel {
     
     var poster: UIImage {
         return _poster
+    }
+    
+    var background: UIImage {
+        get {
+            return _background
+        }
+        set {
+            _background = newValue
+        }
     }
     
     var name: String {
@@ -58,15 +68,16 @@ class MovieModel {
         return _posterLink
     }
     
-    var backgrounLink: String {
+    var backgroundLink: String {
         if _backgroundLink == nil {
             _backgroundLink = ""
         }
         return _backgroundLink
     }
     
-    init(poster: UIImage, name: String, overview: String, rating: Double, year: String, posterLink: String, backLink: String) {
+    init(poster: UIImage, background: UIImage , name: String, overview: String, rating: Double, year: String, posterLink: String, backLink: String) {
         _poster = poster
+        _background = background
         _name = name
         _overview = overview
         _rating = rating

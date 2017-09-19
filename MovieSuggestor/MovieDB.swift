@@ -68,6 +68,7 @@ class MovieDB {
                     for i in list {
                         
                         self.movieList.append(MovieModel(poster: UIImage(),
+                                                         background: UIImage(),
                                                          name: i["title"] as! String,
                                                          overview: i["overview"] as! String,
                                                          rating: i["vote_average"] as! Double,
@@ -91,7 +92,7 @@ class MovieDB {
     
     
     func getMoviePoster(url: String) {
-        let imageURL = URL(string: url)!
+        //let imageURL = URL(string: url)!
         
         
         DispatchQueue.global().async {

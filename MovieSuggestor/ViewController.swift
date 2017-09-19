@@ -18,10 +18,10 @@ class ViewController: UIViewController, TTADataPickerViewDelegate, TransferData,
     
     let pickerView = TTADataPickerView(title: "Genres", type: .text, delegate: nil)
     var genres = [GenreModel]() // List of Genres and their ids
-    var genreNames: [String] = []
+    var genreNames: [String] = [] // List used to populate the pickerview
     
-    var movieArray: [MovieModel] = []
-    var genreArray: [MovieModel] = [] // The list that will used to populate the tableview
+    var movieArray: [MovieModel] = [] // Gets all the movies for that genre
+    var genreArray: [MovieModel] = [] // Has the filtered movies from that genre
     
     
     let backend = MovieDB()
@@ -40,9 +40,10 @@ class ViewController: UIViewController, TTADataPickerViewDelegate, TransferData,
         tableView.dataSource = self
         
         
+        
+        
         backend.delegate = self
         backend.getGenreList()
-        
         backend.movieDelegate = self
     }
     
@@ -56,7 +57,7 @@ class ViewController: UIViewController, TTADataPickerViewDelegate, TransferData,
         movieArray = data
         filterForRatings() // FILTER
         
-        if getSuggestions.titleLabel?.text == "Get More Suggestions" {
+        if getSuggestions.titleLabel?.text == "Filter" {
             tableView.reloadData()
         }
     }
@@ -103,16 +104,17 @@ class ViewController: UIViewController, TTADataPickerViewDelegate, TransferData,
             genreButton.setTitle(titles[0], for: .normal)
             selectedGenre = titles[0] // The genre the user selected
             
+            // New genre selected so starting from page 1
             selectedPage = 1
-            getSuggestions.setTitle("Get Suggestions", for: .normal)
+            getSuggestions.setTitle("Filter", for: .normal)
             self.backend.getMovieList(genreID: getGenreID(genre: selectedGenre), page: selectedPage)
         }
     }
     
     @IBAction func findMoviesPressed(_ sender: UIButton) {
         
-        if getSuggestions.titleLabel?.text == "Get Suggestions" {
-            getSuggestions.setTitle("Get More Suggestions", for: .normal)
+        if getSuggestions.titleLabel?.text == "Get" {
+            getSuggestions.setTitle("Filter", for: .normal)
             tableView.reloadData()
         }
         else {

@@ -28,7 +28,10 @@ extension ViewController  { // Tableview functions
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "getMoreInfo", sender: genreArray[indexPath.row])
+        
+        
+        self.performSegue(withIdentifier: "getMoreInfo", sender: genreArray[indexPath.row])
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -31,7 +31,7 @@ class MovieInfoVC: UIViewController {
     
     func updateUI() {
         
-        let url = URL(string: movieInfo.backgrounLink)
+        let url = URL(string: movieInfo.backgroundLink)
         
         DispatchQueue.global().async {
             do {
@@ -45,6 +45,8 @@ class MovieInfoVC: UIViewController {
             }
         }
         
+        
+        movieBackground.image = movieInfo.background
         movieTitle.text = movieInfo.name
         yearLabel.text = getYear(date: movieInfo.year)
         ratingLabel.text = "\(movieInfo.rating) / 10"
