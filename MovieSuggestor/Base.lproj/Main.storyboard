@@ -234,6 +234,12 @@
                                         <state key="normal" title="Prev">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="NO"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="prevMoviesPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TER-rC-CNZ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I5E-hR-1Ki">
                                         <rect key="frame" x="110.5" y="0.0" width="106" height="37"/>
@@ -242,6 +248,9 @@
                                         <state key="normal" title="Get">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="materialDesign" value="NO"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="findMoviesPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eNt-CD-De7"/>
                                         </connections>
@@ -253,6 +262,9 @@
                                         <state key="normal" title="More">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="moreMoviesPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UzF-0I-Rbb"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -276,7 +288,10 @@
                     </view>
                     <connections>
                         <outlet property="genreButton" destination="GEI-6J-x6b" id="mlC-YZ-NrW"/>
+                        <outlet property="getButton" destination="I5E-hR-1Ki" id="YSy-vO-uUK"/>
                         <outlet property="getSuggestions" destination="I5E-hR-1Ki" id="ihL-Li-kOL"/>
+                        <outlet property="moreButton" destination="ApZ-yS-xyp" id="x7m-M4-39j"/>
+                        <outlet property="prevButton" destination="Xfi-U4-pLi" id="jps-78-1PD"/>
                         <outlet property="ratingLabel" destination="SY9-H2-9hI" id="xvg-1h-8Z8"/>
                         <outlet property="tableView" destination="JdL-nH-5di" id="hiM-p4-tOI"/>
                         <segue destination="lKH-mZ-YFF" kind="show" identifier="getMoreInfo" id="94U-Gc-MRU"/>

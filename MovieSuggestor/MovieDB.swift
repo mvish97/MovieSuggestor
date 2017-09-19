@@ -74,7 +74,7 @@ class MovieDB {
                                                          rating: i["vote_average"] as! Double,
                                                          year: i["release_date"] as! String,
                                                          posterLink: "\(self.IMAGE_URL)\(i["poster_path"] as! String)",
-                                                         backLink: "\(self.IMAGE_URL)\(i["backdrop_path"] as! String)"))
+                                                         backLink: "\(self.IMAGE_URL)\(i["backdrop_path"] as? String ?? "")"))
                         
                         //print("POSTER","\(self.IMAGE_URL)\(i["poster_path"] as! String)")
                         //print("BACKGROUND", "\(self.IMAGE_URL)\(i["backdrop_path"] as! String)")

@@ -16,6 +16,11 @@ class ViewController: UIViewController, TTADataPickerViewDelegate, TransferData,
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var getSuggestions: UIButton!
     
+    @IBOutlet weak var prevButton: UIButton!
+    @IBOutlet weak var getButton: UIButton!
+    @IBOutlet weak var moreButton: UIButton!
+    
+    
     let pickerView = TTADataPickerView(title: "Genres", type: .text, delegate: nil)
     var genres = [GenreModel]() // List of Genres and their ids
     var genreNames: [String] = [] // List used to populate the pickerview
@@ -30,6 +35,7 @@ class ViewController: UIViewController, TTADataPickerViewDelegate, TransferData,
     var selectedGenre: String = ""
     var selectedRating: Int = 5
     var selectedPage: Int = 1
+    var moreOrPrevPressed: Bool = false
     
     var mainColor = UIColor(red: 66/255, green: 148/255, blue: 247/255, alpha: 1.0)
     
@@ -39,8 +45,7 @@ class ViewController: UIViewController, TTADataPickerViewDelegate, TransferData,
         tableView.delegate = self
         tableView.dataSource = self
         
-        
-        
+        buttonsetup()
         
         backend.delegate = self
         backend.getGenreList()
@@ -55,9 +60,9 @@ class ViewController: UIViewController, TTADataPickerViewDelegate, TransferData,
     func transferMovies(data: [MovieModel]) { // Getting the movie list
         //movieArray = []
         movieArray = data
-        filterForRatings() // FILTER
+        filterForRatings() // FILTER in case the user doesn't change the default rating
         
-        if getSuggestions.titleLabel?.text == "Filter" {
+        if moreOrPrevPressed {
             tableView.reloadData()
         }
     }
@@ -105,8 +110,9 @@ class ViewController: UIViewController, TTADataPickerViewDelegate, TransferData,
             selectedGenre = titles[0] // The genre the user selected
             
             // New genre selected so starting from page 1
+            moreOrPrevPressed = false
             selectedPage = 1
-            getSuggestions.setTitle("Filter", for: .normal)
+            getSuggestions.setTitle("Get", for: .normal)
             self.backend.getMovieList(genreID: getGenreID(genre: selectedGenre), page: selectedPage)
         }
     }
@@ -115,14 +121,29 @@ class ViewController: UIViewController, TTADataPickerViewDelegate, TransferData,
         
         if getSuggestions.titleLabel?.text == "Get" {
             getSuggestions.setTitle("Filter", for: .normal)
-            tableView.reloadData()
         }
-        else {
-            selectedPage += 1
+        tableView.reloadData()
+    }
+    
+    @IBAction func moreMoviesPressed(_ sender: UIButton) {
+        moreOrPrevPressed = true
+        selectedPage += 1
+        self.backend.getMovieList(genreID: getGenreID(genre: selectedGenre), page: selectedPage)
+    }
+    
+    @IBAction func prevMoviesPressed(_ sender: UIButton) {
+        if selectedPage-1 != 0 {
+            moreOrPrevPressed = true
+            selectedPage -= 1
             self.backend.getMovieList(genreID: getGenreID(genre: selectedGenre), page: selectedPage)
         }
     }
     
+    func buttonsetup() {
+        getButton.layer.cornerRadius = 10
+        prevButton.layer.cornerRadius = 10
+        moreButton.layer.cornerRadius = 10
+    }
 }
 
 func getYear(date: String) -> String {
