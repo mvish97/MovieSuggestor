@@ -67,7 +67,7 @@ class MovieDB {
                     
                     for i in list {
                         
-                        self.movieList.append(MovieModel(poster: #imageLiteral(resourceName: "images"),
+                        self.movieList.append(MovieModel(poster: #imageLiteral(resourceName: "tempPoster"),
                                                          background: UIImage(),
                                                          name: i["title"] as! String,
                                                          overview: i["overview"] as! String,
