@@ -91,6 +91,7 @@ class MovieModel {
         _backgroundLink = backLink
         
         getPosterImage()
+        getBackgroundImage()
     }
     
     func getPosterImage() {
@@ -100,6 +101,21 @@ class MovieModel {
                 let data = try Data(contentsOf: URL(string: self._posterLink)!)
                 DispatchQueue.global().sync {
                     self._poster = UIImage(data: data)!
+                }
+            }
+            catch  {
+                //handle the error
+            }
+        }
+    }
+    
+    func getBackgroundImage() {
+        
+        DispatchQueue.global().async {
+            do {
+                let data = try Data(contentsOf: URL(string: self._backgroundLink)!)
+                DispatchQueue.global().sync {
+                    self._background = UIImage(data: data)!
                 }
             }
             catch  {

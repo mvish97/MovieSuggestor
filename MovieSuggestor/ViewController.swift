@@ -9,6 +9,8 @@
 import UIKit
 import TTADataPickerView
 
+var mainColor = UIColor(red: 66/255, green: 148/255, blue: 247/255, alpha: 1.0)
+
 class ViewController: UIViewController, TTADataPickerViewDelegate, TransferData, TransferMovies, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var genreButton: UIButton!
@@ -36,8 +38,6 @@ class ViewController: UIViewController, TTADataPickerViewDelegate, TransferData,
     var selectedRating: Int = 5
     var selectedPage: Int = 1
     var moreOrPrevPressed: Bool = false
-    
-    var mainColor = UIColor(red: 66/255, green: 148/255, blue: 247/255, alpha: 1.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -160,21 +160,6 @@ class MovieCell: UITableViewCell {
     @IBOutlet weak var ratingLabel: UILabel!
     
     func updateUI(movie: MovieModel) {
-        
-        let url = URL(string: movie.posterLink)
-        
-        DispatchQueue.global().async {
-            do {
-                let data = try Data(contentsOf: url!)
-                DispatchQueue.global().sync {
-                    self.posterImage.image = UIImage(data: data)!
-                }
-            }
-            catch  {
-                //handle the error
-            }
-        }
-        
         
         posterImage.image = movie.poster
         nameLabel.text = movie.name
