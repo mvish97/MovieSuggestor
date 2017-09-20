@@ -78,8 +78,11 @@ class MovieDB {
                         
                     }
                     
+                    if let del = self.movieDelegate {
+                        del.transferMovies(data: self.movieList)
+                    }
                    
-                    self.getMoviePoster()
+                    //self.getMoviePoster()
                 }
             }
         }

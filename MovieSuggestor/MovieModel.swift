@@ -89,8 +89,26 @@ class MovieModel {
         _year = year
         _posterLink = posterLink
         _backgroundLink = backLink
+        
+        getPosterImage()
+    }
+    
+    func getPosterImage() {
+        
+        DispatchQueue.global().async {
+            do {
+                let data = try Data(contentsOf: URL(string: self._posterLink)!)
+                DispatchQueue.global().sync {
+                    self._poster = UIImage(data: data)!
+                }
+            }
+            catch  {
+                //handle the error
+            }
+        }
     }
 }
+
 
 class GenreModel {
     
