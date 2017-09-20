@@ -76,35 +76,38 @@ class MovieDB {
                                                          posterLink: "\(self.IMAGE_URL)\(i["poster_path"] as! String)",
                                                          backLink: "\(self.IMAGE_URL)\(i["backdrop_path"] as? String ?? "")"))
                         
-                        //print("POSTER","\(self.IMAGE_URL)\(i["poster_path"] as! String)")
-                        //print("BACKGROUND", "\(self.IMAGE_URL)\(i["backdrop_path"] as! String)")
-                        
                     }
                     
-                    if let del = self.movieDelegate {
-                        del.transferMovies(data: self.movieList)
-                    }
                    
+                    self.getMoviePoster()
                 }
             }
         }
     }
     
     
-    func getMoviePoster(url: String) {
-        //let imageURL = URL(string: url)!
+    func getMoviePoster() {
         
-        
-        DispatchQueue.global().async {
-            do {
-                //let data = try Data(contentsOf: imageURL)
-                DispatchQueue.global().sync {
-                    
+        for mov in movieList {
+            let imageURL = URL(string: mov.posterLink)!
+            
+            DispatchQueue.global().async {
+                do {
+                    let data = try Data(contentsOf: imageURL)
+                    DispatchQueue.global().sync {
+                        mov.poster = UIImage(data: data)!
+                    }
+                }
+                catch  {
+                    //handle the error
                 }
             }
-            catch  {
-                //handle the error
-            }
+        }
+        
+        if let del = self.movieDelegate {
+            del.transferMovies(data: self.movieList)
         }
     }
+    
+    
 }

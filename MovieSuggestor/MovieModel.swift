@@ -21,7 +21,12 @@ class MovieModel {
     private var _backgroundLink: String!
     
     var poster: UIImage {
-        return _poster
+        get {
+            return _poster
+        }
+        set {
+            _poster = newValue
+        }
     }
     
     var background: UIImage {
