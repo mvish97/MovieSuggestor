@@ -81,36 +81,8 @@ class MovieDB {
                     if let del = self.movieDelegate {
                         del.transferMovies(data: self.movieList)
                     }
-                   
-                    //self.getMoviePoster()
                 }
             }
         }
     }
-    
-    
-    func getMoviePoster() {
-        
-        for mov in movieList {
-            let imageURL = URL(string: mov.posterLink)!
-            
-            DispatchQueue.global().async {
-                do {
-                    let data = try Data(contentsOf: imageURL)
-                    DispatchQueue.global().sync {
-                        mov.poster = UIImage(data: data)!
-                    }
-                }
-                catch  {
-                    //handle the error
-                }
-            }
-        }
-        
-        if let del = self.movieDelegate {
-            del.transferMovies(data: self.movieList)
-        }
-    }
-    
-    
 }

@@ -33,7 +33,7 @@
                                     <color key="titleColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="goToMainPage" id="9uU-Vo-tnv"/>
+                                    <segue destination="FLV-QC-l9H" kind="show" id="8Vr-yD-XEt"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7Op-YN-Clw">
@@ -71,9 +71,113 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wEF-wv-Ue2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-631.20000000000005" y="138.98050974512745"/>
+            <point key="canvasLocation" x="-1057" y="57"/>
         </scene>
-        <!--View Controller-->
+        <!--Help-->
+        <scene sceneID="oK4-TN-3wE">
+            <objects>
+                <viewController id="gj6-M5-PvB" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qGC-wu-uFL"/>
+                        <viewControllerLayoutGuide type="bottom" id="8eU-WO-Qsy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hh0-Yg-sdc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOW THE APP WORKS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPR-M3-fHh">
+                                <rect key="frame" x="24" y="28" width="327" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="QdG-e9-dts"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
+                                <color key="textColor" red="0.24428118770000001" green="0.54933214190000001" blue="0.76479065420000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1. Select a genre by clicking on the &quot;Select Genre&quot; button" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNq-FT-c5l">
+                                <rect key="frame" x="24" y="67" width="327" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2. Select a minimum rating using the slider" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nbr-f3-pM6">
+                                <rect key="frame" x="24" y="128" width="327" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3. Press the &quot;GET&quot; button to get a list of suggestions" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quh-KY-JWY">
+                                <rect key="frame" x="24" y="189" width="327" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4. Press the &quot;MORE&quot; button to get more suggestions" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMb-9M-SZE">
+                                <rect key="frame" x="24" y="255" width="327" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5. Press the &quot;PREV&quot; button to go back to the previous suggestions" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tDH-Cl-cWQ">
+                                <rect key="frame" x="24" y="325" width="327" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="6. The &quot;FILTER&quot; button can be used to refine the current suggestions using the slider" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqp-47-eJB">
+                                <rect key="frame" x="24" y="394" width="327" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="7. Want suggestions for a new genre? Start from step 1 again!" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qX9-uN-AuH">
+                                <rect key="frame" x="24" y="486" width="327" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="YPR-M3-fHh" firstAttribute="leading" secondItem="hh0-Yg-sdc" secondAttribute="leadingMargin" constant="8" id="Hs2-0d-hBC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YPR-M3-fHh" secondAttribute="trailing" constant="8" id="Q3n-4R-Rca"/>
+                            <constraint firstItem="YPR-M3-fHh" firstAttribute="top" secondItem="qGC-wu-uFL" secondAttribute="bottom" constant="8" id="m50-c3-gzr"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Help" image="icons8-Help Filled-32" id="qjV-DQ-QHZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WW7-r5-8OF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="765.60000000000002" y="-296.40179910044981"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Ks7-An-kiI">
+            <objects>
+                <tabBarController id="FLV-QC-l9H" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="WxW-gM-AYU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Evj-Xa-2Ac"/>
+                        <segue destination="gj6-M5-PvB" kind="relationship" relationship="viewControllers" id="frm-xG-YsH"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AYa-iA-syq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-150" y="56"/>
+        </scene>
+        <!--Movies-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MovieSuggestor" customModuleProvider="target" sceneMemberID="viewController">
@@ -149,7 +253,7 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="93" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JdL-nH-5di">
-                                <rect key="frame" x="0.0" y="196" width="375" height="471"/>
+                                <rect key="frame" x="0.0" y="196" width="375" height="422"/>
                                 <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="movieCell" rowHeight="175" id="HcO-ON-RaU" customClass="MovieCell" customModule="MovieSuggestor" customModuleProvider="target">
@@ -286,6 +390,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="pTN-nU-oVk" secondAttribute="trailing" constant="8" id="zQU-f8-hPj"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Movies" image="icons8-Movie Projector Filled-32" id="1b5-GP-BQb"/>
                     <connections>
                         <outlet property="genreButton" destination="GEI-6J-x6b" id="mlC-YZ-NrW"/>
                         <outlet property="getButton" destination="I5E-hR-1Ki" id="YSy-vO-uUK"/>
@@ -299,7 +404,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="221.59999999999999" y="138.98050974512745"/>
+            <point key="canvasLocation" x="766" y="566"/>
         </scene>
         <!--Movie InfoVC-->
         <scene sceneID="sl5-Fo-TBe">
@@ -397,10 +502,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hOp-du-hTh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1048.8" y="138.98050974512745"/>
+            <point key="canvasLocation" x="1703" y="565"/>
         </scene>
     </scenes>
     <resources>
         <image name="MovieGenie" width="1389" height="1400"/>
+        <image name="icons8-Help Filled-32" width="32" height="32"/>
+        <image name="icons8-Movie Projector Filled-32" width="32" height="32"/>
     </resources>
 </document>
