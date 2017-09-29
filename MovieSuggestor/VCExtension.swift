@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension ViewController  { // Tableview functions
+extension ViewController { // Tableview functions
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath) as? MovieCell {

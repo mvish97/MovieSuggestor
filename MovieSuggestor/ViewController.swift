@@ -10,6 +10,7 @@ import UIKit
 import TTADataPickerView
 
 var mainColor = UIColor(red: 66/255, green: 148/255, blue: 247/255, alpha: 1.0)
+var genres = [GenreModel]() // List of Genres and their ids
 
 class ViewController: UIViewController, TTADataPickerViewDelegate, TransferData, TransferMovies, UITableViewDelegate, UITableViewDataSource {
 
@@ -24,7 +25,6 @@ class ViewController: UIViewController, TTADataPickerViewDelegate, TransferData,
     
     
     let pickerView = TTADataPickerView(title: "Genres", type: .text, delegate: nil)
-    var genres = [GenreModel]() // List of Genres and their ids
     var genreNames: [String] = [] // List used to populate the pickerview
     
     var movieArray: [MovieModel] = [] // Gets all the movies for that genre
@@ -51,6 +51,7 @@ class ViewController: UIViewController, TTADataPickerViewDelegate, TransferData,
         backend.getGenreList()
         backend.movieDelegate = self
     }
+    
     
     func transferData(data: [GenreModel]) { // Getting the genre list
         genres = data
