@@ -64,6 +64,18 @@ class TVShowListVC: UIViewController, TranferShows, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 175
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showInfo", sender: tv_list[indexPath.row])
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let dest = segue.destination as? TVShowInfoVC {
+            if let item = sender as? MovieModel {
+                dest.showInfo = item
+            }
+        }
+    }
 }
 
 func getGenreNames(ids: [Int]) -> [String] { // GLOBAL
