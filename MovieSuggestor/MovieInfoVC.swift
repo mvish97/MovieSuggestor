@@ -23,7 +23,6 @@ class MovieInfoVC: UIViewController {
         super.viewDidLoad()
         
         updateUI()
-        
     }
     
     @IBAction func backPressed(_ sender: UIButton) {

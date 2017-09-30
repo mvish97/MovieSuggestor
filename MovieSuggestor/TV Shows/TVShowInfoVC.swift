@@ -31,6 +31,11 @@ class TVShowInfoVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func similarShowsPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "similarShows", sender: showInfo)
+    }
+    
+    
     func updateUI() {
         posterImage.image = showInfo.background
         nameLabel.text = showInfo.name
