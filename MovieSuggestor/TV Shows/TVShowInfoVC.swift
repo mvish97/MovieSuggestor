@@ -9,22 +9,28 @@
 import Foundation
 import UIKit
 
-class TVShowInfoVC: UIViewController {
+class TVShowInfoVC: UIViewController, TransferSimilarShows {
     
     @IBOutlet weak var posterImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var yearLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var genreLabel: UILabel!
-    @IBOutlet weak var overviewLabel: UILabel!
+    @IBOutlet weak var overviewTextView: UITextView!
     
+    var backend = MovieDB()
     
     var showInfo: MovieModel!
+    
+    var similarShowsList: [MovieModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         updateUI()
+        
+        backend.getSimilarShows(id: showInfo.id)
+        backend.similarShowDelegate = self
     }
     
     @IBAction func backPressed(_ sender: UIButton) {
@@ -32,7 +38,19 @@ class TVShowInfoVC: UIViewController {
     }
     
     @IBAction func similarShowsPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "similarShows", sender: showInfo)
+        performSegue(withIdentifier: "similarShows", sender: similarShowsList)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let dest = segue.destination as? SimilarShowsVC {
+            if let item = sender as? [MovieModel] {
+                dest.showList = item
+            }
+        }
+    }
+    
+    func transferSimilarShows(data: [MovieModel]) {
+        similarShowsList = data
     }
     
     
@@ -42,29 +60,10 @@ class TVShowInfoVC: UIViewController {
         yearLabel.text = getYear(date: showInfo.year)
         ratingLabel.text = "\(showInfo.rating) / 10"
         
-        var genreText = ""
-        let genreNames = getGenreNames(ids: showInfo.genres)
-        
-        if genreNames.count > 2 {
-            for i in 0...genreNames.count-1 {
-                if i != genreNames.count-1 {
-                    genreText += "\(genreNames[i]), "
-                }
-                else {
-                    genreText += "& \(genreNames[i])"
-                }
-            }
-            
-            genreLabel.text = genreText
-        }
-        else if genreNames.count == 2 {
-            genreLabel.text = genreNames[0] + " & " + genreNames[1]
-        }
-        else {
-            genreLabel.text = genreNames[0]
-        }
-
-        overviewLabel.text = showInfo.overview
+        genreLabel.text = getGenreNames(ids: showInfo.genres)
+    
+        overviewTextView.text = showInfo.overview
+        overviewTextView.isEditable = false
     }
 }
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0528D4D01F7EFF820054CA18 /* TVShowInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0528D4CF1F7EFF820054CA18 /* TVShowInfoVC.swift */; };
+		0528D4D31F8060810054CA18 /* SimilarShowsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0528D4D21F8060810054CA18 /* SimilarShowsVC.swift */; };
 		054488C21F6F02EE00383D4D /* VCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054488C11F6F02EE00383D4D /* VCExtension.swift */; };
 		054488C41F6F067200383D4D /* MovieInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054488C31F6F067200383D4D /* MovieInfoVC.swift */; };
 		0572EF731F79BA320056441D /* TVShowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572EF721F79BA320056441D /* TVShowVC.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		0528D4CF1F7EFF820054CA18 /* TVShowInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowInfoVC.swift; sourceTree = "<group>"; };
+		0528D4D21F8060810054CA18 /* SimilarShowsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimilarShowsVC.swift; sourceTree = "<group>"; };
 		054488C11F6F02EE00383D4D /* VCExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCExtension.swift; sourceTree = "<group>"; };
 		054488C31F6F067200383D4D /* MovieInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieInfoVC.swift; sourceTree = "<group>"; };
 		0572EF721F79BA320056441D /* TVShowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowVC.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				0572EF721F79BA320056441D /* TVShowVC.swift */,
 				0572EF741F79BCF10056441D /* TVShowListVC.swift */,
 				0528D4CF1F7EFF820054CA18 /* TVShowInfoVC.swift */,
+				0528D4D21F8060810054CA18 /* SimilarShowsVC.swift */,
 			);
 			path = "TV Shows";
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				054488C41F6F067200383D4D /* MovieInfoVC.swift in Sources */,
 				054488C21F6F02EE00383D4D /* VCExtension.swift in Sources */,
 				059B5AA51F6CADDC005AA9BB /* ViewController.swift in Sources */,
+				0528D4D31F8060810054CA18 /* SimilarShowsVC.swift in Sources */,
 				0572EF751F79BCF10056441D /* TVShowListVC.swift in Sources */,
 				0572EF731F79BA320056441D /* TVShowVC.swift in Sources */,
 				059B5AB91F6DC0DE005AA9BB /* MovieDB.swift in Sources */,

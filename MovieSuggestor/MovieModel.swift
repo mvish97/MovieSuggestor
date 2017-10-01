@@ -20,6 +20,7 @@ class MovieModel {
     private var _posterLink: String!
     private var _backgroundLink: String!
     private var _genres: [Int]!
+    private var _id: Int!
     
     var poster: UIImage {
         get {
@@ -88,10 +89,17 @@ class MovieModel {
         return _genres
     }
     
+    var id: Int {
+        if _id == nil {
+            _id = 0
+        }
+        return _id
+    }
+    
     init(poster: UIImage, background: UIImage ,
          name: String, overview: String,
          rating: Double, year: String,
-         posterLink: String, backLink: String, genres: [Int]) {
+         posterLink: String, backLink: String, genres: [Int], id: Int) {
         
         _poster = poster
         _background = background
@@ -102,6 +110,7 @@ class MovieModel {
         _posterLink = posterLink
         _backgroundLink = backLink
         _genres = genres
+        _id = id
         
         
         getPosterImage()

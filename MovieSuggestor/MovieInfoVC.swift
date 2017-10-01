@@ -15,7 +15,7 @@ class MovieInfoVC: UIViewController {
     @IBOutlet weak var movieTitle: UILabel!
     @IBOutlet weak var yearLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
-    @IBOutlet weak var overviewLabel: UILabel!
+    @IBOutlet weak var overviewTextView: UITextView!
     
     var movieInfo: MovieModel!
     
@@ -35,6 +35,8 @@ class MovieInfoVC: UIViewController {
         movieTitle.text = movieInfo.name
         yearLabel.text = getYear(date: movieInfo.year)
         ratingLabel.text = "\(movieInfo.rating) / 10"
-        overviewLabel.text = movieInfo.overview
+        overviewTextView.text = movieInfo.overview
+        overviewTextView.isEditable = false
+        
     }
 }

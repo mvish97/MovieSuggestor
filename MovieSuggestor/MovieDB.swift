@@ -22,6 +22,10 @@ protocol TranferShows {
     func transferShows(data: [MovieModel])
 }
 
+protocol TransferSimilarShows {
+    func transferSimilarShows(data: [MovieModel])
+}
+
 class MovieDB {
     
     let BASE_URL = "https://api.themoviedb.org/3"
@@ -36,6 +40,7 @@ class MovieDB {
     var delegate: TransferData? = nil
     var movieDelegate: TransferMovies? = nil
     var showDelegate: TranferShows? = nil
+    var similarShowDelegate: TransferSimilarShows? = nil
     
     var genreList: [GenreModel] = []
     var movieList: [MovieModel] = []
@@ -80,7 +85,8 @@ class MovieDB {
                                                          year: i["release_date"] as! String,
                                                          posterLink: "\(self.IMAGE_URL)\(i["poster_path"] as! String)",
                                                          backLink: "\(self.IMAGE_URL)\(i["backdrop_path"] as? String ?? "")",
-                                                         genres: i["genre_ids"] as! [Int]))
+                                                         genres: i["genre_ids"] as! [Int],
+                                                         id: i["id"] as! Int))
                         
                     }
                     
@@ -112,12 +118,45 @@ class MovieDB {
                                                  year: i["first_air_date"] as! String,
                                                  posterLink: "\(self.IMAGE_URL)\(i["poster_path"] as! String)",
                                                  backLink: "\(self.IMAGE_URL)\(i["backdrop_path"] as? String ?? "")",
-                                                 genres: i["genre_ids"] as! [Int]))
+                                                 genres: i["genre_ids"] as! [Int],
+                                                 id: i["id"] as! Int))
                     }
                     
                     if let del = self.showDelegate {
                         del.transferShows(data: tvList)
                     }
+                }
+            }
+        }
+    }
+    
+    func getSimilarShows(id: Int) {
+        
+        let url = BASE_URL + "/tv/\(id)/recommendations?" + API_KEY + LANG + "&page=1"
+        
+        var similarShowsList: [MovieModel] = []
+        
+        Alamofire.request(url).responseJSON { response in
+            if let result = response.result.value as? Dictionary<String,Any> {
+                if let list = result["results"] as? [Dictionary<String,Any>] {
+                    
+                    for i in list {
+                        similarShowsList.append(MovieModel(poster: #imageLiteral(resourceName: "tempPoster"),
+                                                 background: UIImage(),
+                                                 name: i["name"] as! String,
+                                                 overview: i["overview"] as! String,
+                                                 rating: i["vote_average"] as! Double,
+                                                 year: i["first_air_date"] as! String,
+                                                 posterLink: "\(self.IMAGE_URL)\(i["poster_path"] as! String)",
+                                                 backLink: "\(self.IMAGE_URL)\(i["backdrop_path"] as? String ?? "")",
+                                                 genres: i["genre_ids"] as! [Int],
+                                                 id: i["id"] as! Int))
+                    }
+                    
+                    if let del = self.similarShowDelegate {
+                        del.transferSimilarShows(data: similarShowsList)
+                    }
+                    
                 }
             }
         }

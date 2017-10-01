@@ -78,7 +78,7 @@ class TVShowListVC: UIViewController, TranferShows, UITableViewDelegate, UITable
     }
 }
 
-func getGenreNames(ids: [Int]) -> [String] { // GLOBAL
+func getGenreNames(ids: [Int]) -> String { // GLOBAL
     
     var names = [String]()
     
@@ -89,8 +89,30 @@ func getGenreNames(ids: [Int]) -> [String] { // GLOBAL
             }
         }
     }
-    return names
+    
+    var genreText: String = ""
+    
+    if names.count > 2 {
+        for i in 0...names.count-1 {
+            if i != names.count-1 {
+                genreText += "\(names[i]), "
+            }
+            else {
+                genreText += "& \(names[i])"
+            }
+        }
+        
+        return genreText
+    }
+    else if names.count == 2 {
+        return names[0] + " & " + names[1]
+    }
+    else {
+        return names[0]
+    }
 }
+
+
 
 class TVShowCell: UITableViewCell {
     
@@ -104,28 +126,7 @@ class TVShowCell: UITableViewCell {
         posterImage.image = show.poster
         nameLabel.text = "\(show.name) (\(getYear(date: show.year)))"
         ratingLabel.text = "\(show.rating) / 10"
-        
-        var genreText = ""
-        let genreNames = getGenreNames(ids: show.genres)
-        
-        if genreNames.count > 2 {
-            for i in 0...genreNames.count-1 {
-                if i != genreNames.count-1 {
-                    genreText += "\(genreNames[i]), "
-                }
-                else {
-                    genreText += "& \(genreNames[i])"
-                }
-            }
-            
-            genreLabel.text = genreText
-        }
-        else if genreNames.count == 2 {
-            genreLabel.text = genreNames[0] + " & " + genreNames[1]
-        }
-        else {
-            genreLabel.text = genreNames[0]
-        }
+        genreLabel.text = getGenreNames(ids: show.genres)
     }
     
 }
