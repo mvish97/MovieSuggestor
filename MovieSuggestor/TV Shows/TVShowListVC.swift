@@ -12,7 +12,8 @@ import UIKit
 class TVShowListVC: UIViewController, TranferShows, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var naviBar: UINavigationBar!
+    @IBOutlet weak var titleLabel: UILabel!
+    
     
     var naviTitle = String()
     var tv_backend = MovieDB()
@@ -21,7 +22,7 @@ class TVShowListVC: UIViewController, TranferShows, UITableViewDelegate, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        naviBar.topItem?.title = naviTitle
+        titleLabel.text = naviTitle
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -30,7 +31,7 @@ class TVShowListVC: UIViewController, TranferShows, UITableViewDelegate, UITable
         tv_backend.getShowList(type: getShowType())
     }
     
-    @IBAction func pressedDone(_ sender: UIBarButtonItem) {
+    @IBAction func donePressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
     
@@ -107,9 +108,10 @@ func getGenreNames(ids: [Int]) -> String { // GLOBAL
     else if names.count == 2 {
         return names[0] + " & " + names[1]
     }
-    else {
+    else if names.count == 1 {
         return names[0]
     }
+    else { return "" }
 }
 
 

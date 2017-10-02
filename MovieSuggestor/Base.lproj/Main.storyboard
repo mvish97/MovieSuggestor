@@ -230,7 +230,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BF6-0E-hWM">
-                                <rect key="frame" x="0.0" y="80" width="375" height="587"/>
+                                <rect key="frame" x="0.0" y="136" width="375" height="531"/>
                                 <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="showCell" rowHeight="175" id="9Bz-oJ-Owv" customClass="TVShowCell" customModule="MovieSuggestor" customModuleProvider="target">
@@ -314,42 +314,47 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fDh-eo-hcP">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wSl-Ui-5v9">
+                                <rect key="frame" x="24" y="44" width="327" height="35"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="k7g-Tq-8zr"/>
+                                    <constraint firstAttribute="height" constant="35" id="qiM-AJ-nTE"/>
                                 </constraints>
-                                <color key="barTintColor" red="0.34911099080000002" green="0.34910383820000002" blue="0.34910866619999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Locations" id="M82-05-arr">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="done" id="JOv-UL-QI8">
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <connections>
-                                                <action selector="pressedDone:" destination="4M1-X8-Qad" id="R3f-et-URc"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="donePressed:" destination="4M1-X8-Qad" eventType="touchUpInside" id="VQ1-Vx-7Ig"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TV Shows" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="meh-b6-jaW">
+                                <rect key="frame" x="24" y="95" width="327" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="6tF-mK-vZJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="7vE-8l-08r" firstAttribute="top" secondItem="BF6-0E-hWM" secondAttribute="bottom" id="0tY-kv-E7V"/>
-                            <constraint firstAttribute="trailing" secondItem="fDh-eo-hcP" secondAttribute="trailing" id="D54-iC-ZQ9"/>
-                            <constraint firstItem="fDh-eo-hcP" firstAttribute="leading" secondItem="6UY-BY-T63" secondAttribute="leading" id="MIS-Ch-I51"/>
-                            <constraint firstItem="fDh-eo-hcP" firstAttribute="top" secondItem="6UY-BY-T63" secondAttribute="top" id="MIW-3z-Bgg"/>
-                            <constraint firstItem="BF6-0E-hWM" firstAttribute="leading" secondItem="6UY-BY-T63" secondAttribute="leading" id="ND4-71-nh6"/>
-                            <constraint firstItem="BF6-0E-hWM" firstAttribute="top" secondItem="fDh-eo-hcP" secondAttribute="bottom" id="lXI-lK-ABS"/>
-                            <constraint firstAttribute="trailing" secondItem="BF6-0E-hWM" secondAttribute="trailing" id="um3-bm-EFy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="meh-b6-jaW" secondAttribute="trailing" constant="8" id="BeZ-3H-VLk"/>
+                            <constraint firstItem="wSl-Ui-5v9" firstAttribute="leading" secondItem="6UY-BY-T63" secondAttribute="leadingMargin" constant="8" id="HDb-Xn-bam"/>
+                            <constraint firstItem="meh-b6-jaW" firstAttribute="leading" secondItem="6UY-BY-T63" secondAttribute="leadingMargin" constant="8" id="JNb-cF-b4C"/>
+                            <constraint firstAttribute="trailing" secondItem="BF6-0E-hWM" secondAttribute="trailing" id="NOR-VT-LNA"/>
+                            <constraint firstItem="wSl-Ui-5v9" firstAttribute="top" secondItem="C3Z-vP-9Je" secondAttribute="bottom" constant="24" id="Nvq-fw-3m8"/>
+                            <constraint firstItem="BF6-0E-hWM" firstAttribute="top" secondItem="meh-b6-jaW" secondAttribute="bottom" constant="16" id="Pgm-VT-rlR"/>
+                            <constraint firstItem="7vE-8l-08r" firstAttribute="top" secondItem="BF6-0E-hWM" secondAttribute="bottom" id="PiM-Ba-Gl6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wSl-Ui-5v9" secondAttribute="trailing" constant="8" id="UAd-pj-7R9"/>
+                            <constraint firstItem="meh-b6-jaW" firstAttribute="top" secondItem="wSl-Ui-5v9" secondAttribute="bottom" constant="16" id="Uv2-K4-CeL"/>
+                            <constraint firstItem="BF6-0E-hWM" firstAttribute="leading" secondItem="6UY-BY-T63" secondAttribute="leading" id="Wbu-5c-2ue"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="naviBar" destination="fDh-eo-hcP" id="BEZ-Tf-gZc"/>
                         <outlet property="tableView" destination="BF6-0E-hWM" id="n5V-Cb-G5l"/>
+                        <outlet property="titleLabel" destination="meh-b6-jaW" id="aWz-bq-p7k"/>
                         <segue destination="oOI-75-cIu" kind="show" identifier="showInfo" id="2do-Yn-3cP"/>
                     </connections>
                 </viewController>
@@ -481,7 +486,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3gb-WT-3ZZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2453.5999999999999" y="-19.340329835082461"/>
+            <point key="canvasLocation" x="2454" y="-6"/>
         </scene>
         <!--Similar ShowsVC-->
         <scene sceneID="cyg-Ie-XZz">
@@ -608,11 +613,12 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="Lri-nC-1Zp" id="uwp-K3-hky"/>
+                        <segue destination="oOI-75-cIu" kind="show" identifier="similarShowsInfo" id="by2-If-WTE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wKl-wY-ljT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3312.8000000000002" y="-19.340329835082461"/>
+            <point key="canvasLocation" x="3446" y="-7"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Ks7-An-kiI">
@@ -978,4 +984,7 @@
         <image name="icons8-Movie Projector Filled-32" width="32" height="32"/>
         <image name="icons8-Retro TV-30" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="2do-Yn-3cP"/>
+    </inferredMetricsTieBreakers>
 </document>
