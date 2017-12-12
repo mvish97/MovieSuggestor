@@ -4,6 +4,8 @@
 > Reason for this project:
 > Sometimes at the end of the week, I want to watch a movie but have to spend time browsing IMDb to find what I want. So, I made this app to save me time!
 
+## Future Updates: Add Core Data to keep track of the Movies/Shows the user has watch to improve recommendations and make the experience more personalized
+
 ## How the app works
 <table style="width:100%">
   <tr>
@@ -46,7 +48,3 @@
       And you get a list of similar shows you can start binging right away!
     </td>
   </tr>
-  
-  ### Future Updates
-  #### - Add Core Data to keep track of the Movies/Shows the user has watch to improve recommendations and make the experience more personalized
-  ####
