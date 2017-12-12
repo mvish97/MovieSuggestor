@@ -32,7 +32,7 @@
   </tr>
   <tr>
     <td align="center">
-      Get more information on shows and maybe you're done watching the show. Just click on "Similar Shows" button.
+      Get more information on shows and maybe you're done watching the show. Just click on the "Similar Shows" button.
     </td>
     <td>
       <img src="https://github.com/mvish97/MovieSuggestor/blob/master/Movie%20Genie%20Media/5_Show_Info.png" width="400">
@@ -47,3 +47,6 @@
     </td>
   </tr>
   
+  ### Future Updates
+  #### - Add Core Data to keep track of the Movies/Shows the user has watch to improve recommendations and make the experience more personalized
+  ####
