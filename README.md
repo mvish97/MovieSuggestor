@@ -1,10 +1,12 @@
 # Movie Genie
-## iOS app that suggests movies based on the chosen genre and minimum rating. Uses the Movie Database API (https://www.themoviedb.org/documentation/api) 
+## iOS app that suggests movies based on the chosen genre and minimum rating.
+## Also suggests similar shows based on what the user has watched
+### Uses the Movie Database API (https://www.themoviedb.org/documentation/api) 
 
 > Reason for this project:
 > Sometimes at the end of the week, I want to watch a movie but have to spend time browsing IMDb to find what I want. So, I made this app to save me time!
 
-#### Future Updates: Add Core Data to keep track of the Movies/Shows the user has watch to improve recommendations and make the experience more personalized ####
+#### Future Updates: Add Core Data to keep track of the Movies/Shows the user has watched to improve recommendations and make the experience more personalized ####
 
 ## How the app works
 <table style="width:100%">
