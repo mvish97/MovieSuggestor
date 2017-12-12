@@ -24,6 +24,8 @@ class TVShowInfoVC: UIViewController, TransferSimilarShows {
     
     var similarShowsList: [MovieModel] = []
     
+    var segueObject: [String: Any] = [:]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,13 +40,16 @@ class TVShowInfoVC: UIViewController, TransferSimilarShows {
     }
     
     @IBAction func similarShowsPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "similarShows", sender: similarShowsList)
+        segueObject["Showlist"] = similarShowsList
+        segueObject["CurrentShow"] = showInfo.name
+        performSegue(withIdentifier: "similarShows", sender: segueObject)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let dest = segue.destination as? SimilarShowsVC {
-            if let item = sender as? [MovieModel] {
-                dest.showList = item
+            if let item = sender as? Dictionary<String,Any> {
+                dest.showList = item["Showlist"] as! [MovieModel]
+                dest.originalShowName = item["CurrentShow"] as! String
             }
         }
     }

@@ -449,7 +449,7 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		099023E320154E6F5B78BE0DC3B0DB0E /* Debug */ = {
+		04903E534EC8437C2B377EFE15352971 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D35BD641ABBFDB901ACB4933450833B8 /* TTADataPickerView.xcconfig */;
 			buildSettings = {
@@ -468,7 +468,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/TTADataPickerView/TTADataPickerView-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/TTADataPickerView/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/TTADataPickerView/TTADataPickerView.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -522,6 +522,40 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		5DB58A06E430BCDDE072A9A57B1D416C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D35BD641ABBFDB901ACB4933450833B8 /* TTADataPickerView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/TTADataPickerView/TTADataPickerView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TTADataPickerView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TTADataPickerView/TTADataPickerView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = TTADataPickerView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		643C76AA582046977B7877822ED7A258 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -722,40 +756,6 @@
 			};
 			name = Debug;
 		};
-		D00C037DB0339AA4A4C7A599CB046205 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D35BD641ABBFDB901ACB4933450833B8 /* TTADataPickerView.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/TTADataPickerView/TTADataPickerView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TTADataPickerView/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TTADataPickerView/TTADataPickerView.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = TTADataPickerView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -789,8 +789,8 @@
 		4B0F77107451DBED293C4851D9AAABA7 /* Build configuration list for PBXNativeTarget "TTADataPickerView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				099023E320154E6F5B78BE0DC3B0DB0E /* Debug */,
-				D00C037DB0339AA4A4C7A599CB046205 /* Release */,
+				04903E534EC8437C2B377EFE15352971 /* Debug */,
+				5DB58A06E430BCDDE072A9A57B1D416C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

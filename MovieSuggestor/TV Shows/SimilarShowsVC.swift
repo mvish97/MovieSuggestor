@@ -15,12 +15,15 @@ class SimilarShowsVC: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     
     var showList: [MovieModel] = []
+    var originalShowName: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        similarToLabel.text = "Shows similar to \(originalShowName)"
     }
     
     @IBAction func backPressed(_ sender: UIButton) {
