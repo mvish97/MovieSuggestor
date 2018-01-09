@@ -1,4 +1,4 @@
-# Movie Genie
+# What Do I Watch?
 ## iOS app that suggests movies based on the chosen genre and minimum rating.
 ## Also suggests similar shows based on what the user has watched
 ### Uses the Movie Database API (https://www.themoviedb.org/documentation/api) 
