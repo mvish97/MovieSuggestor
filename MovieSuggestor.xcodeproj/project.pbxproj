@@ -13,6 +13,8 @@
 		054488C41F6F067200383D4D /* MovieInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054488C31F6F067200383D4D /* MovieInfoVC.swift */; };
 		0572EF731F79BA320056441D /* TVShowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572EF721F79BA320056441D /* TVShowVC.swift */; };
 		0572EF751F79BCF10056441D /* TVShowListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572EF741F79BCF10056441D /* TVShowListVC.swift */; };
+		0581D659205673F90005EA74 /* HelpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0581D658205673F90005EA74 /* HelpVC.swift */; };
+		058255852053AF0B001CA225 /* OpeningController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058255842053AF0B001CA225 /* OpeningController.swift */; };
 		059B5AA31F6CADDC005AA9BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059B5AA21F6CADDC005AA9BB /* AppDelegate.swift */; };
 		059B5AA51F6CADDC005AA9BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059B5AA41F6CADDC005AA9BB /* ViewController.swift */; };
 		059B5AA81F6CADDC005AA9BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 059B5AA61F6CADDC005AA9BB /* Main.storyboard */; };
@@ -31,6 +33,8 @@
 		054488C31F6F067200383D4D /* MovieInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieInfoVC.swift; sourceTree = "<group>"; };
 		0572EF721F79BA320056441D /* TVShowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowVC.swift; sourceTree = "<group>"; };
 		0572EF741F79BCF10056441D /* TVShowListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowListVC.swift; sourceTree = "<group>"; };
+		0581D658205673F90005EA74 /* HelpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpVC.swift; sourceTree = "<group>"; };
+		058255842053AF0B001CA225 /* OpeningController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpeningController.swift; sourceTree = "<group>"; };
 		059B5A9F1F6CADDC005AA9BB /* MovieSuggestor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieSuggestor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		059B5AA21F6CADDC005AA9BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		059B5AA41F6CADDC005AA9BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				059B5AA21F6CADDC005AA9BB /* AppDelegate.swift */,
+				058255842053AF0B001CA225 /* OpeningController.swift */,
 				059B5AA41F6CADDC005AA9BB /* ViewController.swift */,
 				054488C11F6F02EE00383D4D /* VCExtension.swift */,
 				054488C31F6F067200383D4D /* MovieInfoVC.swift */,
@@ -98,6 +103,7 @@
 				059B5AB81F6DC0DE005AA9BB /* MovieDB.swift */,
 				059B5AB61F6CF122005AA9BB /* MovieModel.swift */,
 				059B5AB41F6CBA58005AA9BB /* MaterialView.swift */,
+				0581D658205673F90005EA74 /* HelpVC.swift */,
 				059B5AA61F6CADDC005AA9BB /* Main.storyboard */,
 				059B5AA91F6CADDC005AA9BB /* Assets.xcassets */,
 				059B5AAB1F6CADDC005AA9BB /* LaunchScreen.storyboard */,
@@ -158,7 +164,7 @@
 				TargetAttributes = {
 					059B5A9E1F6CADDC005AA9BB = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = MZQMK97U7D;
+						DevelopmentTeam = 8G55M7N8N9;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -249,7 +255,9 @@
 			files = (
 				059B5AB71F6CF122005AA9BB /* MovieModel.swift in Sources */,
 				059B5AB51F6CBA58005AA9BB /* MaterialView.swift in Sources */,
+				058255852053AF0B001CA225 /* OpeningController.swift in Sources */,
 				054488C41F6F067200383D4D /* MovieInfoVC.swift in Sources */,
+				0581D659205673F90005EA74 /* HelpVC.swift in Sources */,
 				054488C21F6F02EE00383D4D /* VCExtension.swift in Sources */,
 				059B5AA51F6CADDC005AA9BB /* ViewController.swift in Sources */,
 				0528D4D31F8060810054CA18 /* SimilarShowsVC.swift in Sources */,
@@ -381,7 +389,7 @@
 			baseConfigurationReference = 2F30043E0DD9763E78ABBA0E /* Pods-MovieSuggestor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = MZQMK97U7D;
+				DEVELOPMENT_TEAM = 8G55M7N8N9;
 				INFOPLIST_FILE = MovieSuggestor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VV.MovieSuggestor;
@@ -395,7 +403,7 @@
 			baseConfigurationReference = 93153EAA3D1ECE90000558D1 /* Pods-MovieSuggestor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = MZQMK97U7D;
+				DEVELOPMENT_TEAM = 8G55M7N8N9;
 				INFOPLIST_FILE = MovieSuggestor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VV.MovieSuggestor;

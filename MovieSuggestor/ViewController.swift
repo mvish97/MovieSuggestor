@@ -64,6 +64,9 @@ class ViewController: UIViewController, TTADataPickerViewDelegate, TransferData,
         filterForRatings() // FILTER in case the user doesn't change the default rating
         
         if moreOrPrevPressed {
+        
+            sleep(1)
+            
             tableView.reloadData()
         }
     }
@@ -102,7 +105,7 @@ class ViewController: UIViewController, TTADataPickerViewDelegate, TransferData,
         selectedRating = Int(sender.value) // The rating the user selected
         ratingLabel.text =  "\(selectedRating)"
         
-        filterForRatings() // FILTER
+        //filterForRatings() // FILTER
     }
 
     func dataPickerView(_ pickerView: TTADataPickerView, didSelectTitles titles: [String]) {
@@ -120,9 +123,11 @@ class ViewController: UIViewController, TTADataPickerViewDelegate, TransferData,
     
     @IBAction func findMoviesPressed(_ sender: UIButton) {
         
-        if getSuggestions.titleLabel?.text == "Get" {
+        if getSuggestions.titleLabel?.text == "Get" && genreButton.titleLabel?.text != "Select Genre"  {
             getSuggestions.setTitle("Filter", for: .normal)
         }
+        
+        filterForRatings()
         tableView.reloadData()
     }
     

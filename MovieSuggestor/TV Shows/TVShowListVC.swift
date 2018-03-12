@@ -47,6 +47,8 @@ class TVShowListVC: UIViewController, TranferShows, UITableViewDelegate, UITable
     func transferShows(data: [MovieModel]) { // Delegate method that populates the table view
         tv_list = data
         
+        sleep(1)
+        
         tableView.reloadData()
     }
     

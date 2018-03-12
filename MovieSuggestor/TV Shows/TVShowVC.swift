@@ -19,8 +19,13 @@ class TVShowVC: ViewController {
     override func viewDidLoad() {
         //super.viewDidLoad()
         
-        popularButton.layer.cornerRadius = 10.0
-        topRatedButton.layer.cornerRadius = 10.0
+        let screenSize = UIScreen.main.bounds
+        let screenHeight = screenSize.height
+        
+        
+        
+//        popularButton.layer.cornerRadius = 10.0
+//        topRatedButton.layer.cornerRadius = 10.0
     }
     
     @IBAction func popularPressed(_ sender: UIButton) {
