@@ -1,4 +1,4 @@
-# Movie Genie
+# What Do I Watch?
 ## iOS app that suggests movies based on the chosen genre and minimum rating.
 ## Also suggests similar shows based on what the user has watched
 ### Uses the Movie Database API (https://www.themoviedb.org/documentation/api) 
@@ -8,19 +8,27 @@
 ## How the app works
 <table style="width:100%">
   <tr>
+    <td align="center">
+      Just pick the genre and the rating you want and click on the "Get" button.
+    </td>
     <td>
       <img src="https://github.com/mvish97/MovieSuggestor/blob/master/Movie%20Genie%20Media/2_Genre_Selection.png" width="400">
     </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://github.com/mvish97/MovieSuggestor/blob/master/Movie%20Genie%20Media/3_Movie_List.png" width="400">
+    </td>
     <td align="center">
-      Just pick the genre and the rating you want
+      Just like that you get a list of the latest movies that you might like!
     </td>
   </tr>
   <tr>
     <td align="center">
-      Click GET and you get a list of the latest movies that you might like!
+      If you're interested in a movie, you can also get more information on it.
     </td>
     <td>
-      <img src="https://github.com/mvish97/MovieSuggestor/blob/master/Movie%20Genie%20Media/3_Movie_List.png" width="400">
+      <img src="https://github.com/mvish97/MovieSuggestor/blob/master/Movie%20Genie%20Media/7_Movie_Info.png" width="400">
     </td>
   </tr>
   <tr>
