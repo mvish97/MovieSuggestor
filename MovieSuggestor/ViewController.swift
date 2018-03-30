@@ -39,17 +39,27 @@ class ViewController: UIViewController, TTADataPickerViewDelegate, TransferData,
     var selectedPage: Int = 1
     var moreOrPrevPressed: Bool = false
     
+    var refreshControl = UIRefreshControl()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
         
+        tableView.refreshControl = self.refreshControl
+        self.refreshControl.addTarget(self, action: #selector(ViewController.didRefreshList), for: .valueChanged)
+        
         buttonsetup()
         
         backend.delegate = self
         backend.getGenreList()
         backend.movieDelegate = self
+    }
+    
+    func didRefreshList() {
+        self.refreshControl.endRefreshing()
+        self.tableView.reloadData()
     }
     
     
@@ -64,10 +74,7 @@ class ViewController: UIViewController, TTADataPickerViewDelegate, TransferData,
         filterForRatings() // FILTER in case the user doesn't change the default rating
         
         if moreOrPrevPressed {
-        
-            sleep(1)
-            
-            tableView.reloadData()
+            self.tableView.reloadData()
         }
     }
     

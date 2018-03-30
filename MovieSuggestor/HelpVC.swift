@@ -11,9 +11,11 @@ import UIKit
 
 class HelpVC: ViewController {
     
+    @IBOutlet weak var showsButton: UIButton!
     
     override func viewDidLoad() {
         //super.viewDidLoad()
+        
     }
     
     @IBAction func showsHelpPressed(_ sender: UIButton) {

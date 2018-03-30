@@ -19,6 +19,8 @@ class TVShowListVC: UIViewController, TranferShows, UITableViewDelegate, UITable
     var tv_backend = MovieDB()
     var tv_list: [MovieModel] = []
     
+    var refreshControl = UIRefreshControl()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,8 +29,16 @@ class TVShowListVC: UIViewController, TranferShows, UITableViewDelegate, UITable
         tableView.delegate = self
         tableView.dataSource = self
         
+        tableView.refreshControl = self.refreshControl
+        self.refreshControl.addTarget(self, action: #selector(ViewController.didRefreshList), for: .valueChanged)
+        
         tv_backend.showDelegate = self
         tv_backend.getShowList(type: getShowType())
+    }
+    
+    func didRefreshList() {
+        self.refreshControl.endRefreshing()
+        self.tableView.reloadData()
     }
     
     @IBAction func donePressed(_ sender: UIButton) {
@@ -46,8 +56,6 @@ class TVShowListVC: UIViewController, TranferShows, UITableViewDelegate, UITable
     
     func transferShows(data: [MovieModel]) { // Delegate method that populates the table view
         tv_list = data
-        
-        sleep(1)
         
         tableView.reloadData()
     }

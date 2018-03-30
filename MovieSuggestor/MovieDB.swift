@@ -116,7 +116,7 @@ class MovieDB {
                                                  overview: i["overview"] as! String,
                                                  rating: i["vote_average"] as! Double,
                                                  year: i["first_air_date"] as! String,
-                                                 posterLink: "\(self.IMAGE_URL)\(i["poster_path"] as! String)",
+                                                 posterLink: "\(self.IMAGE_URL)\(i["poster_path"] as? String ?? "")",
                                                  backLink: "\(self.IMAGE_URL)\(i["backdrop_path"] as? String ?? "")",
                                                  genres: i["genre_ids"] as! [Int],
                                                  id: i["id"] as! Int))

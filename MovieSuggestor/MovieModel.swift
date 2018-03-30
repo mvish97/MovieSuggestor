@@ -122,9 +122,12 @@ class MovieModel {
         DispatchQueue.global().async {
             do {
                 let data = try Data(contentsOf: URL(string: self._posterLink)!)
-                DispatchQueue.global().sync {
+                DispatchQueue.main.async {
                     self._poster = UIImage(data: data)!
                 }
+//                DispatchQueue.global().sync {
+//                    self._poster = UIImage(data: data)!
+//                }
             }
             catch  {
                 //handle the error
